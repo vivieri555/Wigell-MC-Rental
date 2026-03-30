@@ -14,11 +14,10 @@ public class Booking {
     private Long id;
 
     @Column()
-    private String name;
+    private String username;
 
-    //customers
+    //customers joina
 
-    //mc
 
     @Column()
     private LocalDateTime startDate;
@@ -26,17 +25,43 @@ public class Booking {
     @Column()
     private LocalDateTime endDate;
 
-    //presenteras i SEK och GBP
+    //presenteras i SEK och GBP, lokal placeholder?
     @Column()
     private Long price;
 
+    @OneToOne(
+            cascade = CascadeType.REFRESH,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
+    )
+    @JoinColumn(
+            name = "mc_id",
+            unique = true,
+            foreignKey = @ForeignKey(name = "fk_booking_mc")
+    )
+    private Bike bike;
+
+    @OneToOne(
+            cascade = CascadeType.REFRESH,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
+    )
+    @JoinColumn(
+            name = "customer_id",
+            unique = true,
+            foreignKey = @ForeignKey(name = "fk_booking_customer")
+    )
+    private Customer customer;
+
     protected Booking() {}
 
-    public Booking(String name, LocalDateTime startDate, LocalDateTime endDate, Long price) {
-        this.name = name;
+    public Booking(String username, LocalDateTime startDate, LocalDateTime endDate, Long price, Bike bike, Customer customer) {
+        this.username = username;
         this.startDate = startDate;
         this.endDate = endDate;
         this.price = price;
+        this.bike = bike;
+        this.customer = customer;
     }
 
     public Long getId() {
@@ -47,12 +72,12 @@ public class Booking {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public LocalDateTime getStartDate() {
@@ -77,5 +102,19 @@ public class Booking {
 
     public void setPrice(Long price) {
         this.price = price;
+    }
+
+    public Bike getMc() {
+        return bike;
+    }
+
+    public void setMc(Bike bike) {
+        this.bike = bike;
+    }
+    public Customer getCustomer() {
+        return customer;
+    }
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

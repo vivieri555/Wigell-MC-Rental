@@ -3,8 +3,8 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "MC")
-public class MC {
+@Table(name = "bike")
+public class Bike {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +23,9 @@ public class MC {
     @Column()
     private String year;
 
-    protected MC() {}
+    protected Bike() {}
 
-    public MC(String brand, String model, String gearbox, String year) {
+    public Bike(String brand, String model, String gearbox, String year) {
         this.brand = brand;
         this.model = model;
         this.gearbox = gearbox;

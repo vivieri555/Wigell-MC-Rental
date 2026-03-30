@@ -18,6 +18,9 @@ public class Customer {
     @Column(nullable = false, length = 50)
     private String lastName;
 
+    @Column()
+    private String phone;
+
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(
             name = "address_id",
@@ -27,14 +30,15 @@ public class Customer {
     @Valid
     private Address address;
 
-    @Column()
+    @Column(unique = true)
     private String username;
 
     protected Customer() {}
 
-    public Customer(String firstName, String lastName, Address address, String username) {
+    public Customer(String firstName, String lastName, String phone, Address address, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.address = address;
         this.username = username;
     }
@@ -56,6 +60,12 @@ public class Customer {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
     public Address getAddress() {
         return address;

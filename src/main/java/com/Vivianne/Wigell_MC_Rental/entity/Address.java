@@ -29,7 +29,6 @@ public class Address {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-
     //@JsonIgnore
     private List<Customer> customersList = new ArrayList<>();
 
