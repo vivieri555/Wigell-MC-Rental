@@ -1,4 +1,76 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-public class BikeService {
+import com.Vivianne.Wigell_MC_Rental.dto.BikeCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
+import com.Vivianne.Wigell_MC_Rental.entity.Bike;
+import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
+import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
+import com.groupc.shared.exception.ResourceNotFoundException;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+public class BikeService implements BikeServiceInterface {
+
+
+    //Behöver lägga in meddelanden om avd som händer
+    //ex när man raderar MC osv...
+
+    private final BikeRepository bikeRepository;
+    public BikeService(BikeRepository bikeRepository) {
+        this.bikeRepository = bikeRepository;
+    }
+
+    @Override
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN')")
+    public BikeDto createBike(BikeCreateDto dto) {
+        Bike bike = Mapper.createBike(dto);
+        Bike saved = bikeRepository.save(bike);
+        return Mapper.toBikeDto(saved);
+    }
+
+    @Override
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN')")
+    public void delete(Long id) {
+    if(!bikeRepository.existsById(id)) {
+        throw new ResourceNotFoundException("Kunde inte hitta MC med id " + id);
+         }
+    bikeRepository.deleteById(id);
+    }
+    //PUT
+    @Override
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN')")
+    public BikeDto update(Long id, BikeDto dto) {
+        Bike bike = bikeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Kunde inte hitta MC med id " + id));
+        bike.setBrand(dto.brand());
+        bike.setModel(dto.model());
+        bike.setGearbox(dto.gearbox());
+        bike.setYear(dto.year());
+        return Mapper.toBikeDto(bike);
+    }
+
+    @Override
+    @Transactional
+    @PreAuthorize("hasRole('ADMIN')")
+    public List<BikeDto> listAll() {
+        return bikeRepository.findAll()
+                .stream()
+                .filter(b -> b.getId() != null)
+                .map(Mapper::toBikeDto)
+                .toList();
+    }
+
+    @Override
+    public BikeDto findById(Long id) {
+        return bikeRepository.findById(id)
+                .map(Mapper::toBikeDto)
+                .orElseThrow(() -> new ResourceNotFoundException("MC hittades inte med id " + id));
+    }
 }

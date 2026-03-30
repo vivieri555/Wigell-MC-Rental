@@ -1,10 +1,8 @@
 package com.Vivianne.Wigell_MC_Rental.mapper;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AddressCreateDto;
-import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
-import com.Vivianne.Wigell_MC_Rental.dto.CustomerCreateDto;
-import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
+import com.Vivianne.Wigell_MC_Rental.dto.*;
 import com.Vivianne.Wigell_MC_Rental.entity.Address;
+import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 
 public final class Mapper {
@@ -21,5 +19,11 @@ public final class Mapper {
     }
     public static AddressDto toAddressDto(Address addressDto) {
         return new AddressDto(addressDto.getId(), addressDto.getStreet(), addressDto.getCity(), addressDto.getPostalCode());
+    }
+    public static BikeDto toBikeDto(Bike bike) {
+        return new BikeDto(bike.getId(), bike.getBrand(), bike.getModel(), bike.getGearbox(), bike.getYear());
+    }
+    public static Bike createBike (BikeCreateDto bikeDto) {
+        return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year());
     }
 }
