@@ -1,6 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.BikeCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.BikeCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 
 import java.util.List;

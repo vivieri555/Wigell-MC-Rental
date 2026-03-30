@@ -1,6 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.BikeCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.BikeCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
@@ -53,6 +53,7 @@ public class BikeService implements BikeServiceInterface {
         bike.setModel(dto.model());
         bike.setGearbox(dto.gearbox());
         bike.setYear(dto.year());
+        bikeRepository.save(bike);
         return Mapper.toBikeDto(bike);
     }
 

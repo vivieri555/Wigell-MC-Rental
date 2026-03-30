@@ -1,13 +1,9 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
-import com.Vivianne.Wigell_MC_Rental.dto.CustomerCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
-import com.Vivianne.Wigell_MC_Rental.repository.AddressRepository;
-import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
-import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,17 +15,10 @@ import java.util.List;
 @Service
 public class CustomerService implements CustomerServiceInterface {
 
-    private final AddressRepository addressRepository;
-    private final BikeRepository bikeRepository;
     private final CustomerRepository customerRepository;
-    private final BookingRepository bookingRepository;
 
-    public CustomerService(AddressRepository addressRepository, BikeRepository bikeRepository,
-                           CustomerRepository customerRepository, BookingRepository bookingRepository) {
-        this.addressRepository = addressRepository;
-        this.bikeRepository = bikeRepository;
+    public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
-        this.bookingRepository = bookingRepository;
     }
 
     @Override

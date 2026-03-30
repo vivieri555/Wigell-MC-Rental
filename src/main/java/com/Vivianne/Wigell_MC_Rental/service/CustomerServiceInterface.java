@@ -1,7 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
-import com.Vivianne.Wigell_MC_Rental.dto.CustomerCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
 
 import java.util.List;

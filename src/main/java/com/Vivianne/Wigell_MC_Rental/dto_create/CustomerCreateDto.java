@@ -1,4 +1,4 @@
-package com.Vivianne.Wigell_MC_Rental.dto;
+package com.Vivianne.Wigell_MC_Rental.dto_create;
 
 import com.Vivianne.Wigell_MC_Rental.entity.Address;
 

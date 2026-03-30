@@ -1,8 +1,13 @@
 package com.Vivianne.Wigell_MC_Rental.mapper;
 
+import com.Vivianne.Wigell_MC_Rental.dto_create.AddressCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.BikeCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.*;
 import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
+import com.Vivianne.Wigell_MC_Rental.entity.Booking;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 
 public final class Mapper {
@@ -25,5 +30,12 @@ public final class Mapper {
     }
     public static Bike createBike (BikeCreateDto bikeDto) {
         return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year());
+    }
+    public static BookingDto toBookingDto(Booking booking) {
+        return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPrice(),
+                booking.getBike(), booking.getCustomer());
+    }
+    public static Booking createBooking(BookingCreateDto bDto) {
+        return new Booking(bDto.startDate(), bDto.endDate(), bDto.price(), bDto.bike(), bDto.customer());
     }
 }

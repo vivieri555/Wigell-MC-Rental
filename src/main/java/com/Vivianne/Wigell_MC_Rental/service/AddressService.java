@@ -1,6 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AddressCreateDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.AddressCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
