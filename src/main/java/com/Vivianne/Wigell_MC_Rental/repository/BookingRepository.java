@@ -15,4 +15,5 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
 
     List<Bike> findByStartDateLessThanEqualAndEndDateGreaterThanEqual(
             LocalDateTime to, LocalDateTime from);
+    List<Booking> findByCustomerId(Long id);
 }

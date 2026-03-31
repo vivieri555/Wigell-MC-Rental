@@ -3,6 +3,7 @@ package com.Vivianne.Wigell_MC_Rental.service;
 import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
+import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
@@ -24,6 +25,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class BookingService implements BookingServiceInterface{
@@ -84,7 +86,7 @@ public class BookingService implements BookingServiceInterface{
     @Override
     @Transactional
     @PreAuthorize("hasRole('ADMIN')")
-    public BookingDto updatePatch(Long id, AvailablePatchDto dto) {
+    public AvailablePatchDto updatePatch(Long id, AvailablePatchDto dto) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new  ResourceNotFoundException("Bokning hittades inte med id: " + id));
 
@@ -92,8 +94,7 @@ public class BookingService implements BookingServiceInterface{
             booking.setAvailable(dto.available());
         }
         Booking saved = bookingRepository.save(booking);
-       // return new AvailablePatchDto(saved.getAvailable());
-        return new BookingDto(saved.getAvailable(), saved.getBike());
+        return new AvailablePatchDto(saved.getAvailable());
     }
 
     @Override
@@ -107,13 +108,12 @@ public class BookingService implements BookingServiceInterface{
                 .toList();
     }
     //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
-    //GetAvailableBikes
-    //List<Bike> avBike = bikeRepository.findByAvailableTrue();
-
+    public List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate) {
+       return bookingRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(startDate, endDate);
+    }
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
-
     public BookingDto rentBike(Long customerId, Long bikeId, LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + customerId));
@@ -137,8 +137,29 @@ public class BookingService implements BookingServiceInterface{
     }
 
     //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
+    public BookingDto changeBooking(Long id, UpdateBookingDto dto) {
+       var booking = bookingRepository.findById(id)
+               .orElseThrow(() -> new ResourceNotFoundException("Hittade inte bokning med id " + id));
+       if(dto.startDate() != null) {
+           booking.setStartDate(dto.startDate());
+       }
+       if (dto.endDate() != null) {
+           booking.setEndDate(dto.endDate());
+       }
+       if (dto.bike() != null) {
+           booking.setBike(dto.bike());
+       }
+       var saved = bookingRepository.save(booking);
+       return Mapper.toBookingDto(saved);
+    }
 
     //Lista bokningar GET /api/v1/bookings?customerId={customerId}
+    public List<BookingDto> customerBooking(Long id) {
+       List<Booking> bookings = bookingRepository.findByCustomerId(id);
+       return bookings.stream()
+               .map(Mapper::toBookingDto)
+               .collect(Collectors.toList());
+    }
 
     public LocalDateTime rentalDate(String rentalDate) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");

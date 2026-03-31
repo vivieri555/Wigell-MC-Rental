@@ -13,6 +13,6 @@ public interface BookingServiceInterface {
     BookingDto create(BookingCreateDto bookingDto);
     void deleteById(Long id);
     BookingDto update(Long id, BookingDto dto);
-    BookingDto updatePatch(Long id, AvailablePatchDto dto);
+    AvailablePatchDto updatePatch(Long id, AvailablePatchDto dto);
     List<BookingDto> listBookings(Long id);
 }

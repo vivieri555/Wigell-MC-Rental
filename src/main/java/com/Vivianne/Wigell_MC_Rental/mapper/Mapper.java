@@ -26,16 +26,16 @@ public final class Mapper {
         return new AddressDto(addressDto.getId(), addressDto.getStreet(), addressDto.getCity(), addressDto.getPostalCode());
     }
     public static BikeDto toBikeDto(Bike bike) {
-        return new BikeDto(bike.getId(), bike.getBrand(), bike.getModel(), bike.getGearbox(), bike.getYear());
+        return new BikeDto(bike.getId(), bike.getBrand(), bike.getModel(), bike.getGearbox(), bike.getYear(), bike.getDayPrice());
     }
     public static Bike createBike (BikeCreateDto bikeDto) {
-        return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year());
+        return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year(), bikeDto.dayPrice());
     }
     public static BookingDto toBookingDto(Booking booking) {
         return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPrice(),
-                booking.getBike(), booking.getCustomer());
+                booking.getBike(), booking.getCustomer(), booking.getAvailable());
     }
     public static Booking createBooking(BookingCreateDto bDto) {
-        return new Booking(bDto.startDate(), bDto.endDate(), bDto.price(), bDto.bike(), bDto.customer());
+        return new Booking(bDto.startDate(), bDto.endDate(), bDto.price(), bDto.bike(), bDto.customer(), bDto.available());
     }
 }
