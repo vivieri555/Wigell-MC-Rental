@@ -1,12 +1,16 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
 import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
+import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
-import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
+import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Booking;
+import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
+import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
+import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -17,9 +21,14 @@ import java.util.List;
 @Service
 public class BookingService implements BookingServiceInterface{
    private final BookingRepository bookingRepository;
+   private final CustomerRepository customerRepository;
+   private final BikeRepository bikeRepository;
 
-   public BookingService(BookingRepository bookingRepository) {
+   public BookingService(BookingRepository bookingRepository, CustomerRepository customerRepository,
+                         BikeRepository bikeRepository) {
        this.bookingRepository = bookingRepository;
+       this.customerRepository = customerRepository;
+       this.bikeRepository = bikeRepository;
    }
 
     @Override
@@ -71,11 +80,13 @@ public class BookingService implements BookingServiceInterface{
     public BookingDto updatePatch(Long id, AvailablePatchDto dto) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new  ResourceNotFoundException("Bokning hittades inte med id: " + id));
-        if(dto.available() != null) {
-            booking.setAvailable(dto);
+
+        if (dto.available() != null) {
+            booking.setAvailable(dto.available());
         }
-        booking saved = bookingRepository.save(booking);
-        return new AvailablePatchDto(saved);
+        Booking saved = bookingRepository.save(booking);
+       // return new AvailablePatchDto(saved.getAvailable());
+        return new BookingDto(saved.getAvailable(), saved.getBike());
     }
 
     @Override
@@ -88,4 +99,25 @@ public class BookingService implements BookingServiceInterface{
                 .map(Mapper::toBookingDto)
                 .toList();
     }
+    //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
+    //GetAvailableBikes
+    List<Bike> avBike = bikeRepository.findByAvailableTrue();
+
+
+    //Hyr motorcykel POST /api/v1/bookings
+    //customer, ledig bike, lägga in i Booking
+    public BikeDto rentBike(BikeDto dto, Long id, Long bikeId) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + id));
+
+        Bike bike = bikeRepository.findById(bikeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Hittade inte MC med id " + bikeId));
+
+    //behöver startdate, enddate, pris. kolla att bike är ledig det datumet?
+
+    }
+
+    //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
+
+    //Lista bokningar GET /api/v1/bookings?customerId={customerId}
 }

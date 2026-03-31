@@ -2,6 +2,7 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -22,7 +23,7 @@ public class Booking {
 
     //presenteras i SEK och GBP, lokal placeholder?
     @Column()
-    private Long price;
+    private BigDecimal price;
 
     @OneToOne(
             cascade = CascadeType.REFRESH,
@@ -56,7 +57,7 @@ public class Booking {
 
     protected Booking() {}
 
-    public Booking(LocalDateTime startDate, LocalDateTime endDate, Long price, Bike bike, Customer customer, Available available) {
+    public Booking(LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Bike bike, Customer customer, Available available) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.price = price;
@@ -89,11 +90,11 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public Long getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
