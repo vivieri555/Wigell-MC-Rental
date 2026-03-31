@@ -49,15 +49,26 @@ public class Booking {
     )
     private Customer customer;
 
+//    @OneToOne(
+//            cascade = CascadeType.REFRESH,
+//            orphanRemoval = true,
+//            fetch = FetchType.LAZY
+//    )
+//    @JoinColumn(
+//            name = "available",
+//            foreignKey = @ForeignKey(name = "fk_booking_available")
+//    )
+//    //private Available available;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "booking_available", joinColumns = @JoinColumn(name = "available_id"))
     @Enumerated(EnumType.STRING)
     @Column(name = "available")
-    private Available available;
+    private Set<Available> available;
 
     protected Booking() {}
 
-    public Booking(LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Bike bike, Customer customer, Available available) {
+    public Booking(LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Bike bike, Customer customer, Set<Available> available) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.price = price;
@@ -111,10 +122,10 @@ public class Booking {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-    public Available getAvailable() {
+    public Set<Available> getAvailable() {
         return available;
     }
-    public void setAvailable(Available available) {
+    public void setAvailable(Set<Available> available) {
         this.available = available;
     }
 }

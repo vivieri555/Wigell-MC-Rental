@@ -2,6 +2,8 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "bike")
 public class Bike {
@@ -23,13 +25,17 @@ public class Bike {
     @Column()
     private String year;
 
+    @Column()
+    private BigDecimal dayPrice;
+
     protected Bike() {}
 
-    public Bike(String brand, String model, String gearbox, String year) {
+    public Bike(String brand, String model, String gearbox, String year, BigDecimal dayPrice) {
         this.brand = brand;
         this.model = model;
         this.gearbox = gearbox;
         this.year = year;
+        this.dayPrice = dayPrice;
     }
 
     public Long getId() {
@@ -70,5 +76,11 @@ public class Bike {
 
     public void setYear(String year) {
         this.year = year;
+    }
+    public BigDecimal getDayPrice() {
+        return dayPrice;
+    }
+    public void setDayPrice(BigDecimal dayPrice) {
+        this.dayPrice = dayPrice;
     }
 }

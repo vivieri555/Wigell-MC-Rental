@@ -4,6 +4,7 @@ import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
+import com.Vivianne.Wigell_MC_Rental.entity.Available;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Booking;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
@@ -16,7 +17,13 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class BookingService implements BookingServiceInterface{
@@ -67,7 +74,7 @@ public class BookingService implements BookingServiceInterface{
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
         booking.setStartDate(b.startDate());
         booking.setEndDate(b.endDate());
-        booking.setPrice(b.price());
+        booking.setPrice(BigDecimal.valueOf(b.price()));
         booking.setBike(b.bike());
         booking.setCustomer(b.customer());
         bookingRepository.save(booking);
@@ -101,23 +108,62 @@ public class BookingService implements BookingServiceInterface{
     }
     //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
     //GetAvailableBikes
-    List<Bike> avBike = bikeRepository.findByAvailableTrue();
+    //List<Bike> avBike = bikeRepository.findByAvailableTrue();
 
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
-    public BikeDto rentBike(BikeDto dto, Long id, Long bikeId) {
-        Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + id));
+
+    public BookingDto rentBike(Long customerId, Long bikeId, LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Set<Available> status) {
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + customerId));
 
         Bike bike = bikeRepository.findById(bikeId)
                 .orElseThrow(() -> new ResourceNotFoundException("Hittade inte MC med id " + bikeId));
 
-    //behöver startdate, enddate, pris. kolla att bike är ledig det datumet?
+        boolean isBusy = bookingRepository.existsByAvailableAndIdAndEndDateAfterAndStartDateBefore(Available.AVAILABLE, bikeId, startDate, endDate);
+        if (isBusy) {
+            throw new ResourceNotFoundException("MC är inte tillgänglig dessa datum");
+        }
+
+        long days = dateDiff(startDate, endDate);
+        if (days <= 0) days = 1;
+        BigDecimal totalPrice = bike.getDayPrice().multiply(BigDecimal.valueOf(days));
+
+        Booking booking =  new Booking(startDate, endDate, totalPrice, bike, customer, status);
+                Booking saved = bookingRepository.save(booking);
+        return Mapper.toBookingDto(saved);
 
     }
 
     //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
 
     //Lista bokningar GET /api/v1/bookings?customerId={customerId}
+
+    public LocalDateTime rentalDate(String rentalDate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime bookingDate;
+        try {
+            bookingDate = LocalDateTime.parse(rentalDate, formatter);
+            System.out.println("Påbörjar uthyrningen datumet " + bookingDate);
+        }
+        catch (Exception e) {
+            throw new ResourceNotFoundException("Ogiltigt uthyrningsdatum, fyll i åååå-mm-dd");
+        }
+        return bookingDate;
+    }
+    public LocalDateTime returnDate(String returnDate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime returnD;
+        try {
+            returnD = LocalDateTime.parse(returnDate, formatter);
+            System.out.println("Återlämningsdatum: " + returnD);
+        } catch (Exception e) {
+            throw new ResourceNotFoundException("Ogiltigt returdatum, fyll i åååå-mm-dd");
+        }
+        return returnD;
+    }
+    public long dateDiff(LocalDateTime rentalDate, LocalDateTime returnDate) {
+        return rentalDate.until(returnDate, ChronoUnit.DAYS);
+    }
 }
