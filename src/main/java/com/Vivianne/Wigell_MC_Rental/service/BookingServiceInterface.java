@@ -6,6 +6,7 @@ import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
+import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -19,4 +20,7 @@ public interface BookingServiceInterface {
                              LocalDateTime endDate, Set<Available> status);
     AvailablePatchDto updatePatch(Long id, AvailablePatchDto dto);
     List<BookingDto> listBookings();
+    List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate);
+    BookingDto changeBooking(Long id, UpdateBookingDto dto);
+    List<BookingDto> customerBooking(Long id);
 }

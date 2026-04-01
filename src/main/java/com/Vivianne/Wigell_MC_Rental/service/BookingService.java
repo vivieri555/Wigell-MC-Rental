@@ -12,6 +12,8 @@ import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -27,6 +29,7 @@ public class BookingService implements BookingServiceInterface{
    private final BookingRepository bookingRepository;
    private final CustomerRepository customerRepository;
    private final BikeRepository bikeRepository;
+   private final Logger logger = LoggerFactory.getLogger(BookingService.class);
 
    public BookingService(BookingRepository bookingRepository, CustomerRepository customerRepository,
                          BikeRepository bikeRepository) {
@@ -38,6 +41,7 @@ public class BookingService implements BookingServiceInterface{
    // Hämta bokning GET /api/v1/bookings/{bookingId}
     @Override
     public BookingDto findById(Long id) {
+       logger.info("Hitta bokning med id " + id);
         return bookingRepository.findById(id)
                 .map(Mapper::toBookingDto)
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id " + id));
@@ -47,6 +51,7 @@ public class BookingService implements BookingServiceInterface{
     if(!bookingRepository.existsById(id)) {
         throw new ResourceNotFoundException("Bokning hittades inte med id: " + id);
         }
+    logger.info("admin raderar bokning med id " + id);
     bookingRepository.deleteById(id);
     }
     //PUT
@@ -60,6 +65,7 @@ public class BookingService implements BookingServiceInterface{
         booking.setBike(b.bike());
         booking.setCustomer(b.customer());
         bookingRepository.save(booking);
+        logger.info("Bokning uppdaterad för kunden");
         return Mapper.toBookingDto(booking);
     }
     //Patch admin
@@ -72,11 +78,13 @@ public class BookingService implements BookingServiceInterface{
             booking.setAvailable(dto.available());
         }
         Booking saved = bookingRepository.save(booking);
+        logger.info("Status ändrad på bokningen till " + saved.getAvailable());
         return new AvailablePatchDto(saved.getAvailable());
     }
 
     @Override
     public List<BookingDto> listBookings() {
+       logger.info("Listar alla bokningar");
         return bookingRepository.findAll()
                 .stream()
                 .filter(b -> b.getId() != null)
@@ -84,12 +92,15 @@ public class BookingService implements BookingServiceInterface{
                 .toList();
     }
     //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
+    @Override
     public List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate) {
+       logger.info("listar alla lediga MC");
        return bookingRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(startDate, endDate);
     }
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
+    @Override
     public BookingDto create(Long customerId, Long bikeId, LocalDateTime startDate,
                                LocalDateTime endDate, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
@@ -109,11 +120,13 @@ public class BookingService implements BookingServiceInterface{
 
         Booking booking =  new Booking(startDate, endDate, totalPrice, bike, customer, status);
                 Booking saved = bookingRepository.save(booking);
+                logger.info("Nu är det bokat");
         return Mapper.toBookingDto(saved);
 
     }
 
     //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
+    @Override
     public BookingDto changeBooking(Long id, UpdateBookingDto dto) {
        var booking = bookingRepository.findById(id)
                .orElseThrow(() -> new ResourceNotFoundException("Hittade inte bokning med id " + id));
@@ -127,11 +140,14 @@ public class BookingService implements BookingServiceInterface{
            booking.setBike(dto.bike());
        }
        var saved = bookingRepository.save(booking);
+       logger.info("Bokning uppdaterad");
        return Mapper.toBookingDto(saved);
     }
 
     //Lista bokningar GET /api/v1/bookings?customerId={customerId}
+    @Override
     public List<BookingDto> customerBooking(Long id) {
+       logger.info("Lista bokning på kund med id " + id);
        List<Booking> bookings = bookingRepository.findByCustomerId(id);
        return bookings.stream()
                .map(Mapper::toBookingDto)

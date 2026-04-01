@@ -6,6 +6,8 @@ import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
 public class CustomerService implements CustomerServiceInterface {
 
     private final CustomerRepository customerRepository;
+    private final Logger logger = LoggerFactory.getLogger(CustomerService.class);
 
     public CustomerService(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
@@ -21,6 +24,7 @@ public class CustomerService implements CustomerServiceInterface {
 
     @Override
     public List<CustomerDto> listAll() {
+        logger.info("Lista alla kunder");
         return customerRepository.findAll()
                 .stream()
                 .filter(customer -> customer.getId() != null)
@@ -30,6 +34,7 @@ public class CustomerService implements CustomerServiceInterface {
 
     @Override
     public CustomerDto findById(Long id) {
+        logger.info("Hitta kund med id " + id);
         return customerRepository.findById(id)
                 .map(Mapper::toDto)
                 .orElseThrow(() -> new ResourceNotFoundException("Medlem hittades inte med id " + id));
@@ -41,6 +46,7 @@ public class CustomerService implements CustomerServiceInterface {
             throw new RuntimeException("Användarnamnet finns redan");
         }
         Customer customer = Mapper.fromCreate(dto);
+        logger.info("Kund skapad " + customer.getFirstName() +" " + customer.getLastName());
         return Mapper.toDto(customerRepository.save(customer));
     }
 
@@ -49,6 +55,7 @@ public class CustomerService implements CustomerServiceInterface {
     if(!customerRepository.existsById(id)) {
     throw new RuntimeException("Kund med id " + id + " existerar inte");
         }
+    logger.info("Kund raderas med id " + id);
     customerRepository.deleteById(id);
     }
 
@@ -65,6 +72,7 @@ public class CustomerService implements CustomerServiceInterface {
         customer.setUsername(dto.username());
 
         customerRepository.save(customer);
+        logger.info("Kunden " + customer.getFirstName() +" " + customer.getLastName() + " är nu uppdaterad");
         return Mapper.toDto(customer);
     }
 }
