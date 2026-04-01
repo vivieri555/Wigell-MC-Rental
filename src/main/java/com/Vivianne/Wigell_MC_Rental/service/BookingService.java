@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -76,7 +75,7 @@ public class BookingService implements BookingServiceInterface{
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
         booking.setStartDate(b.startDate());
         booking.setEndDate(b.endDate());
-        booking.setPrice(BigDecimal.valueOf(b.price()));
+        booking.setPrice(b.price());
         booking.setBike(b.bike());
         booking.setCustomer(b.customer());
         bookingRepository.save(booking);
@@ -114,7 +113,8 @@ public class BookingService implements BookingServiceInterface{
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
-    public BookingDto rentBike(Long customerId, Long bikeId, LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Set<Available> status) {
+    public BookingDto rentBike(Long customerId, Long bikeId, LocalDateTime startDate,
+                               LocalDateTime endDate, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + customerId));
 
