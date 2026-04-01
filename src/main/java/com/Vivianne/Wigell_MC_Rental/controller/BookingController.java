@@ -69,7 +69,7 @@ public class BookingController {
     public ResponseEntity<BookingDto> delete(@PathVariable Long bookingId) {
         return ResponseEntity.noContent().build();
     }
-    @PatchMapping("/{bookingId}")
+    @PatchMapping(value = "/{bookingId}", params = "type=available")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<AvailablePatchDto> updatePatch(@PathVariable Long bookingId, AvailablePatchDto dto) {
         return ResponseEntity.ok(bookingService.updatePatch(bookingId, dto));
