@@ -1,5 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.controller;
 
+import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
@@ -57,5 +58,20 @@ public class BookingController {
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<BookingDto> findById(@PathVariable Long bookingId) {
         return ResponseEntity.ok().body(bookingService.findById(bookingId));
+    }
+    @PutMapping("/{bookingId}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<BookingDto> update(@PathVariable Long bookingId, BookingDto dto) {
+        return ResponseEntity.ok().body(bookingService.update(bookingId, dto));
+    }
+    @DeleteMapping("/{bookingId}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<BookingDto> delete(@PathVariable Long bookingId) {
+        return ResponseEntity.noContent().build();
+    }
+    @PatchMapping("/{bookingId}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<AvailablePatchDto> updatePatch(@PathVariable Long bookingId, AvailablePatchDto dto) {
+        return ResponseEntity.ok(bookingService.updatePatch(bookingId, dto));
     }
 }
