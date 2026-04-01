@@ -6,9 +6,7 @@ import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.AddressRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AddressService implements AddressServiceInterface {
@@ -16,8 +14,6 @@ public class AddressService implements AddressServiceInterface {
     public AddressService(AddressRepository addressRepository) { this.addressRepository = addressRepository; }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public AddressDto create(AddressCreateDto addressDto) {
         Address address = Mapper.createAddress(addressDto);
         Address saved = addressRepository.save(address);
@@ -25,8 +21,6 @@ public class AddressService implements AddressServiceInterface {
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public void deleteAddress(Long id) {
         if(!addressRepository.existsById(id)) {
             throw new ResourceNotFoundException("Adress med id " + id + " existerar inte");

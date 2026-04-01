@@ -6,9 +6,7 @@ import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,8 +20,6 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public List<CustomerDto> listAll() {
         return customerRepository.findAll()
                 .stream()
@@ -33,8 +29,6 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public CustomerDto findById(Long id) {
         return customerRepository.findById(id)
                 .map(Mapper::toDto)
@@ -42,8 +36,6 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public CustomerDto create(CustomerCreateDto dto) {
         if(customerRepository.existsByUsername(dto.username())) {
             throw new RuntimeException("Användarnamnet finns redan");
@@ -53,8 +45,6 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public void deleteCustomer(Long id) {
     if(!customerRepository.existsById(id)) {
     throw new RuntimeException("Kund med id " + id + " existerar inte");
@@ -64,8 +54,6 @@ public class CustomerService implements CustomerServiceInterface {
 
     //PUT metoden
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public CustomerDto update(CustomerDto dto, Long id) {
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Kunde hittades inte med id " + id));

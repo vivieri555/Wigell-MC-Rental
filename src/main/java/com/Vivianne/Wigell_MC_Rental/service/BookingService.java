@@ -1,10 +1,8 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
 import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
-import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
-import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Booking;
@@ -14,9 +12,7 @@ import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -39,27 +35,14 @@ public class BookingService implements BookingServiceInterface{
        this.bikeRepository = bikeRepository;
    }
 
+   // Hämta bokning GET /api/v1/bookings/{bookingId}
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public BookingDto findById(Long id) {
         return bookingRepository.findById(id)
                 .map(Mapper::toBookingDto)
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id " + id));
     }
-    //User ska kunna boka
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('USER')")
-    public BookingDto create(BookingCreateDto bookingDto) {
-        Booking booking = Mapper.createBooking(bookingDto);
-        Booking saved = bookingRepository.save(booking);
-        return Mapper.toBookingDto(saved);
-    }
-
-    @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(Long id) {
     if(!bookingRepository.existsById(id)) {
         throw new ResourceNotFoundException("Bokning hittades inte med id: " + id);
@@ -68,8 +51,6 @@ public class BookingService implements BookingServiceInterface{
     }
     //PUT
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public BookingDto update(Long id, BookingDto b) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
@@ -83,8 +64,6 @@ public class BookingService implements BookingServiceInterface{
     }
     //Patch admin
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
     public AvailablePatchDto updatePatch(Long id, AvailablePatchDto dto) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new  ResourceNotFoundException("Bokning hittades inte med id: " + id));
@@ -97,9 +76,7 @@ public class BookingService implements BookingServiceInterface{
     }
 
     @Override
-    @Transactional
-    @PreAuthorize("hasRole('ADMIN')")
-    public List<BookingDto> listBookings(Long id) {
+    public List<BookingDto> listBookings() {
         return bookingRepository.findAll()
                 .stream()
                 .filter(b -> b.getId() != null)
@@ -113,7 +90,7 @@ public class BookingService implements BookingServiceInterface{
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
-    public BookingDto rentBike(Long customerId, Long bikeId, LocalDateTime startDate,
+    public BookingDto create(Long customerId, Long bikeId, LocalDateTime startDate,
                                LocalDateTime endDate, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + customerId));
