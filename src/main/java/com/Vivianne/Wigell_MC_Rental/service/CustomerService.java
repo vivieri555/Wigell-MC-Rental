@@ -1,5 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
+import com.Vivianne.Wigell_MC_Rental.dto.UpdateUserDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
@@ -16,10 +17,13 @@ import java.util.List;
 public class CustomerService implements CustomerServiceInterface {
 
     private final CustomerRepository customerRepository;
+    private final KeycloakUserService keycloakUserService;
     private final Logger logger = LoggerFactory.getLogger(CustomerService.class);
 
-    public CustomerService(CustomerRepository customerRepository) {
+    public CustomerService(CustomerRepository customerRepository,
+                           KeycloakUserService keycloakUserService) {
         this.customerRepository = customerRepository;
+        this.keycloakUserService = keycloakUserService;
     }
 
     @Override
@@ -63,8 +67,20 @@ public class CustomerService implements CustomerServiceInterface {
     @Override
     public CustomerDto update(CustomerDto dto, Long id) {
         Customer customer = customerRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Kunde hittades inte med id " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Kund hittades inte med id " + id));
 
+        boolean firstNameChanged = dto.firstName() != null && !dto.firstName().equals(customer.getFirstName());
+        boolean lastNameChanged = dto.lastName() != null && !dto.lastName().equals(customer.getLastName());
+        
+        if ( customer.getKeycloakUserId() != null && firstNameChanged || lastNameChanged) {
+            keycloakUserService.updateUserProfile(
+                    customer.getKeycloakUserId(),
+                    new UpdateUserDto(
+                            firstNameChanged ? dto.firstName() : null,
+                            lastNameChanged ? dto.lastName() : null
+                    )
+            );
+        }
         customer.setFirstName(dto.firstName());
         customer.setLastName(dto.lastName());
         customer.setPhone(dto.phone());
