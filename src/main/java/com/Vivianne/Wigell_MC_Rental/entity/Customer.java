@@ -4,7 +4,13 @@ import jakarta.persistence.*;
 import jakarta.validation.Valid;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "customer",
+uniqueConstraints = {
+       @UniqueConstraint(
+        name = "uk_customer_kc_user_id", columnNames = {"keycloak_user_id"}) },
+        indexes = {
+        @Index(name = "idx_customer_kc_user_id", columnList = "keycloak_user_id")
+        } )
 public class Customer {
 
     @Id
@@ -33,8 +39,19 @@ public class Customer {
     @Column(unique = true)
     private String username;
 
+    @Column(unique = true, length = 36)
+    private String keycloakUserId;
+
     protected Customer() {}
 
+    public Customer(String firstName, String lastName, String phone, Address address, String username, String keycloakUserId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.address = address;
+        this.username = username;
+        this.keycloakUserId = keycloakUserId;
+    }
     public Customer(String firstName, String lastName, String phone, Address address, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -78,5 +95,9 @@ public class Customer {
     }
     public void setUsername(String username) {
         this.username = username;
+    }
+    public String getKeycloakUserId() { return keycloakUserId; }
+    public void setKeycloakUserId(String keycloakUserId) {
+        this.keycloakUserId = keycloakUserId;
     }
 }
