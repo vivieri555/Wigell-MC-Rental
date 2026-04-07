@@ -3,6 +3,9 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "customer",
 uniqueConstraints = {
@@ -27,14 +30,14 @@ public class Customer {
     @Column()
     private String phone;
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(
-            name = "address_id",
-            nullable = false,
-            foreignKey = @ForeignKey(name = "fk_customer_address")
+    @ManyToMany
+    @JoinTable(
+            name = "customer_addresses",
+            joinColumns = @JoinColumn(name = "customer_id"),
+            inverseJoinColumns = @JoinColumn(name = "address_id")
     )
     @Valid
-    private Address address;
+    private List<Address> addresses = new ArrayList<>();
 
     @Column(unique = true)
     private String username;
@@ -44,19 +47,21 @@ public class Customer {
 
     protected Customer() {}
 
-    public Customer(String firstName, String lastName, String phone, Address address, String username, String keycloakUserId) {
+    public Customer(String firstName, String lastName, String phone, List<Address> addresses,
+                    String username, String keycloakUserId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        this.address = address;
+        this.addresses = addresses;
         this.username = username;
         this.keycloakUserId = keycloakUserId;
     }
-    public Customer(String firstName, String lastName, String phone, Address address, String username) {
+    public Customer(String firstName, String lastName, String phone,
+                    List<Address> addresses, String username) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        this.address = address;
+        this.addresses = addresses;
         this.username = username;
     }
     public Long getId() {
@@ -84,11 +89,11 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public Address getAddress() {
-        return address;
+    public List<Address> getAddress() {
+        return addresses;
     }
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(List<Address> addresses) {
+        this.addresses = addresses;
     }
     public String getUsername() {
         return username;

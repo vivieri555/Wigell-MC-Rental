@@ -53,14 +53,14 @@ public class CustomerController {
     //Behöver göra om metoderna för adresserna, så de kan hantera customerId
     @PostMapping("/{customerId}/addresses")
     public ResponseEntity<AddressDto> createAddress(@PathVariable Long customerId, @RequestBody AddressCreateDto addressDto) {
-        AddressDto address = addressService.create(addressDto);
+        AddressDto address = addressService.create(addressDto, customerId);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{customerId}")
                 .buildAndExpand(address.id()).toUri();
         return ResponseEntity.created(location).body(address);
     }
     @DeleteMapping("/{customerId}/addresses/{addressId}")
     public ResponseEntity<AddressDto> deleteAddress(@PathVariable Long customerId, @PathVariable Long addressId) {
-        addressService.deleteAddress(addressId);
+        addressService.deleteAddress(addressId, customerId);
         return ResponseEntity.noContent().build();
     }
 }

@@ -11,12 +11,14 @@ import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
+import com.groupc.shared.client.CurrencyClient;
 import com.groupc.shared.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -30,13 +32,15 @@ public class BookingService implements BookingServiceInterface{
    private final CustomerRepository customerRepository;
    private final BikeRepository bikeRepository;
    private final Logger logger = LoggerFactory.getLogger(BookingService.class);
+    private final CurrencyClient currencyClient;
 
-   public BookingService(BookingRepository bookingRepository, CustomerRepository customerRepository,
-                         BikeRepository bikeRepository) {
+    public BookingService(BookingRepository bookingRepository, CustomerRepository customerRepository,
+                         BikeRepository bikeRepository, CurrencyClient currencyClient) {
        this.bookingRepository = bookingRepository;
        this.customerRepository = customerRepository;
        this.bikeRepository = bikeRepository;
-   }
+        this.currencyClient = currencyClient;
+    }
 
    // Hämta bokning GET /api/v1/bookings/{bookingId}
     @Override
@@ -61,7 +65,7 @@ public class BookingService implements BookingServiceInterface{
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
         booking.setStartDate(b.startDate());
         booking.setEndDate(b.endDate());
-        booking.setPrice(b.price());
+        booking.setPriceSEK(b.price());
         booking.setBike(b.bike());
         booking.setCustomer(b.customer());
         bookingRepository.save(booking);
@@ -116,9 +120,13 @@ public class BookingService implements BookingServiceInterface{
 
         long days = dateDiff(startDate, endDate);
         if (days <= 0) days = 1;
-        BigDecimal totalPrice = bike.getDayPrice().multiply(BigDecimal.valueOf(days));
+        BigDecimal totalPriceSEK = bike.getDayPrice().multiply(BigDecimal.valueOf(days));
 
-        Booking booking =  new Booking(startDate, endDate, totalPrice, bike, customer, status);
+                double exchangeRate = currencyClient.getExchangeRate("SEK", "GBP");
+        BigDecimal totalPriceGBP = totalPriceSEK.multiply(BigDecimal.valueOf(exchangeRate))
+                .setScale(2, RoundingMode.HALF_UP);
+
+        Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, status);
                 Booking saved = bookingRepository.save(booking);
                 logger.info("Nu är det bokat");
         return Mapper.toBookingDto(saved);

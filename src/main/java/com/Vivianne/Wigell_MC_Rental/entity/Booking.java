@@ -23,7 +23,10 @@ public class Booking {
 
     //presenteras i SEK och GBP, lokal placeholder?
     @Column()
-    private BigDecimal price;
+    private BigDecimal priceSEK;
+
+    @Column()
+    private BigDecimal totalPriceGBP;
 
     @OneToOne(
             cascade = CascadeType.REFRESH,
@@ -68,10 +71,12 @@ public class Booking {
 
     protected Booking() {}
 
-    public Booking(LocalDateTime startDate, LocalDateTime endDate, BigDecimal price, Bike bike, Customer customer, Set<Available> available) {
+    public Booking(LocalDateTime startDate, LocalDateTime endDate, BigDecimal priceSEK, BigDecimal totalPriceGBP, Bike bike,
+                   Customer customer, Set<Available> available) {
         this.startDate = startDate;
         this.endDate = endDate;
-        this.price = price;
+        this.priceSEK = priceSEK;
+        this.totalPriceGBP = totalPriceGBP;
         this.bike = bike;
         this.customer = customer;
         this.available = available;
@@ -101,13 +106,17 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public BigDecimal getPriceSEK() {
+        return priceSEK;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setPriceSEK(BigDecimal priceSEK) {
+        this.priceSEK = priceSEK;
     }
+
+    public BigDecimal getTotalPriceGBP() { return totalPriceGBP;}
+
+    public void setTotalPriceGBP(BigDecimal totalPriceGBP) { this.totalPriceGBP = totalPriceGBP; }
 
     public Bike getBike() {
         return bike;

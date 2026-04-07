@@ -1,8 +1,11 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
+import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateUserDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.AddressCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
+import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
@@ -49,7 +52,18 @@ public class CustomerService implements CustomerServiceInterface {
         if(customerRepository.existsByUsername(dto.username())) {
             throw new RuntimeException("Användarnamnet finns redan");
         }
-        Customer customer = Mapper.fromCreate(dto);
+
+        String keycloakId = keycloakUserService.createUserAndAssignRole(
+                dto.firstName(),
+                dto.lastName(),
+                dto.phone(),
+                dto.address(),
+                dto.username(),
+                dto.password()
+        );
+
+        Customer customer = Mapper.fromCreate(dto, keycloakId);
+
         logger.info("Kund skapad " + customer.getFirstName() +" " + customer.getLastName());
         return Mapper.toDto(customerRepository.save(customer));
     }
@@ -59,6 +73,8 @@ public class CustomerService implements CustomerServiceInterface {
     if(!customerRepository.existsById(id)) {
     throw new RuntimeException("Kund med id " + id + " existerar inte");
         }
+    keycloakUserService.delete(findCustomer(id).getKeycloakUserId());
+
     logger.info("Kund raderas med id " + id);
     customerRepository.deleteById(id);
     }
@@ -71,7 +87,7 @@ public class CustomerService implements CustomerServiceInterface {
 
         boolean firstNameChanged = dto.firstName() != null && !dto.firstName().equals(customer.getFirstName());
         boolean lastNameChanged = dto.lastName() != null && !dto.lastName().equals(customer.getLastName());
-        
+
         if ( customer.getKeycloakUserId() != null && firstNameChanged || lastNameChanged) {
             keycloakUserService.updateUserProfile(
                     customer.getKeycloakUserId(),
@@ -84,11 +100,16 @@ public class CustomerService implements CustomerServiceInterface {
         customer.setFirstName(dto.firstName());
         customer.setLastName(dto.lastName());
         customer.setPhone(dto.phone());
-        customer.setAddress(dto.address());
+        customer.setAddress(dto.addresses());
         customer.setUsername(dto.username());
 
         customerRepository.save(customer);
         logger.info("Kunden " + customer.getFirstName() +" " + customer.getLastName() + " är nu uppdaterad");
         return Mapper.toDto(customer);
+    }
+    public Customer findCustomer(Long customerId) {
+        logger.debug("Hitta kund");
+        return customerRepository.findById(customerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Hittar inte kund"));
     }
 }

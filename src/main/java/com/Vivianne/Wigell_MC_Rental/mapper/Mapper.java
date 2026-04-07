@@ -10,14 +10,16 @@ import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Booking;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 
+import java.util.List;
+
 public final class Mapper {
     public static CustomerDto toDto(Customer customer) {
         return new CustomerDto(customer.getId(), customer.getFirstName(), customer.getLastName(),
-                customer.getPhone(), customer.getAddress(), customer.getUsername());
+                customer.getPhone(), (Address) customer.getAddress(), customer.getUsername());
     }
-    public static Customer fromCreate(CustomerCreateDto createDto) {
+    public static Customer fromCreate(CustomerCreateDto createDto, String keycloakId) {
         return new Customer(createDto.firstName(), createDto.lastName(),
-                createDto.phone(), createDto.address(), createDto.username());
+                createDto.phone(), (List<Address>) createDto.address(), createDto.username(), createDto.keycloakUserId());
     }
     public static Address createAddress(AddressCreateDto address) {
         return new Address(address.street(), address.city(), address.postalCode());
