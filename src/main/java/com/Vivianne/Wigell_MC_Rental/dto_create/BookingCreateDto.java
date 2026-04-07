@@ -9,5 +9,5 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 public record BookingCreateDto(LocalDateTime startDate, LocalDateTime endDate,
-                               BigDecimal price, Customer customer, Bike bike, Set<Available> available) {
+                               BigDecimal priceSEK, BigDecimal totalPriceGBP, Customer customer, Bike bike, Set<Available> available) {
 }

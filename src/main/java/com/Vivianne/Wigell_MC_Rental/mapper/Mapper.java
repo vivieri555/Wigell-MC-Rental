@@ -15,7 +15,7 @@ import java.util.List;
 public final class Mapper {
     public static CustomerDto toDto(Customer customer) {
         return new CustomerDto(customer.getId(), customer.getFirstName(), customer.getLastName(),
-                customer.getPhone(), (Address) customer.getAddress(), customer.getUsername());
+                customer.getPhone(), (List<Address>) customer.getAddress(), customer.getUsername());
     }
     public static Customer fromCreate(CustomerCreateDto createDto, String keycloakId) {
         return new Customer(createDto.firstName(), createDto.lastName(),
@@ -34,10 +34,10 @@ public final class Mapper {
         return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year(), bikeDto.dayPrice());
     }
     public static BookingDto toBookingDto(Booking booking) {
-        return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPrice(),
+        return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPriceSEK(),
                 booking.getBike(), booking.getCustomer(), booking.getAvailable());
     }
     public static Booking createBooking(BookingCreateDto bDto) {
-        return new Booking(bDto.startDate(), bDto.endDate(), bDto.price(), bDto.bike(), bDto.customer(), bDto.available());
+        return new Booking(bDto.startDate(), bDto.endDate(), bDto.priceSEK(), bDto.totalPriceGBP(), bDto.bike(), bDto.customer(), bDto.available());
     }
 }

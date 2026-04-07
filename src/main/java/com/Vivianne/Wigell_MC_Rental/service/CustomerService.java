@@ -1,11 +1,8 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AddressDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateUserDto;
-import com.Vivianne.Wigell_MC_Rental.dto_create.AddressCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.CustomerCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.CustomerDto;
-import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.Vivianne.Wigell_MC_Rental.mapper.Mapper;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;

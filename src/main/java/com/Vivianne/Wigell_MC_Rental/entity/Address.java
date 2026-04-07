@@ -24,13 +24,13 @@ public class Address {
     @Column(nullable = false, length = 50)
     private String postalCode;
 
-    @OneToMany(
-            mappedBy = "address",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    //@JsonIgnore
-    private List<Customer> customersList = new ArrayList<>();
+//    @OneToMany(
+//            mappedBy = "address",
+//            cascade = CascadeType.ALL,
+//            orphanRemoval = true
+//    )
+//    //@JsonIgnore
+//    private List<Customer> customersList = new ArrayList<>();
 
     protected Address() {}
 
