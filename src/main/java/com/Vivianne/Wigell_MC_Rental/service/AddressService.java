@@ -10,6 +10,7 @@ import com.groupc.shared.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AddressService implements AddressServiceInterface {
@@ -23,6 +24,7 @@ public class AddressService implements AddressServiceInterface {
     this.customerRepository = customerRepository; }
 
     @Override
+    @Transactional
     public AddressDto create(AddressCreateDto addressDto, Long customerId) {
         logger.info("Skapar adress på gata " + addressDto.street());
         var customer = customerService.findCustomer(customerId);
@@ -39,6 +41,7 @@ public class AddressService implements AddressServiceInterface {
     }
 
     @Override
+    @Transactional
     public void deleteAddress(Long addressId, Long customerId) {
         if(!addressRepository.existsById(addressId)) {
             throw new ResourceNotFoundException("Adress med id " + addressId + " existerar inte");

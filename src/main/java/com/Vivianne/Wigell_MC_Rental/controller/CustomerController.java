@@ -50,7 +50,6 @@ public class CustomerController {
         return ResponseEntity.ok(customerService.update(dto, customerId));
     }
 
-    //Behöver göra om metoderna för adresserna, så de kan hantera customerId
     @PostMapping("/{customerId}/addresses")
     public ResponseEntity<AddressDto> createAddress(@PathVariable Long customerId, @RequestBody AddressCreateDto addressDto) {
         AddressDto address = addressService.create(addressDto, customerId);

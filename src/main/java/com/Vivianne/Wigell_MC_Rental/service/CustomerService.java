@@ -54,7 +54,8 @@ public class CustomerService implements CustomerServiceInterface {
                 dto.firstName(),
                 dto.lastName(),
                 dto.username(),
-                dto.password()
+                dto.password(),
+                "USER"
         );
 
         Customer customer = Mapper.fromCreate(dto, keycloakId);

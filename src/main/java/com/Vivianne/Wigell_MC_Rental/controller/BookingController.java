@@ -5,7 +5,6 @@ import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
-import com.Vivianne.Wigell_MC_Rental.service.BikeService;
 import com.Vivianne.Wigell_MC_Rental.service.BookingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -28,7 +27,7 @@ public class BookingController {
     //Ändra i metoder för BookingDto till BookingCreateDto  ??
     @PostMapping
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
-    public ResponseEntity<BookingDto> create(@RequestBody BookingCreateDto bookingCreateDto, Long customerId, Long bikeId, LocalDateTime startDate,
+    public ResponseEntity<BookingDto> create(Long customerId, Long bikeId, LocalDateTime startDate,
                                              LocalDateTime endDate, Set<Available> status) {
     BookingDto book = bookingService.create(customerId, bikeId, startDate,
             endDate, status);

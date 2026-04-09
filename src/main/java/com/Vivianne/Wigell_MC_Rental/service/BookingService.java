@@ -16,6 +16,7 @@ import com.groupc.shared.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -46,6 +47,7 @@ public class BookingService implements BookingServiceInterface{
 
    // Hämta bokning GET /api/v1/bookings/{bookingId}
     @Override
+    @Transactional
     public BookingDto findById(Long id) {
        logger.info("Hitta bokning med id " + id);
         return bookingRepository.findById(id)
@@ -53,6 +55,7 @@ public class BookingService implements BookingServiceInterface{
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id " + id));
     }
     @Override
+    @Transactional
     public void deleteById(Long id) {
     if(!bookingRepository.existsById(id)) {
         throw new ResourceNotFoundException("Bokning hittades inte med id: " + id);
@@ -62,6 +65,7 @@ public class BookingService implements BookingServiceInterface{
     }
     //PUT
     @Override
+    @Transactional
     public BookingDto update(Long id, BookingDto b) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
@@ -76,6 +80,7 @@ public class BookingService implements BookingServiceInterface{
     }
     //Patch admin
     @Override
+    @Transactional
     public AvailablePatchDto updatePatch(Long id, AvailablePatchDto dto) {
         Booking booking = bookingRepository.findById(id)
                 .orElseThrow(() -> new  ResourceNotFoundException("Bokning hittades inte med id: " + id));
@@ -89,6 +94,7 @@ public class BookingService implements BookingServiceInterface{
     }
 
     @Override
+    @Transactional
     public List<BookingDto> listBookings() {
        logger.info("Listar alla bokningar");
         return bookingRepository.findAll()
@@ -99,6 +105,7 @@ public class BookingService implements BookingServiceInterface{
     }
     //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
     @Override
+    @Transactional
     public List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate) {
        logger.info("listar alla lediga MC");
        return bookingRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(startDate, endDate);
@@ -107,6 +114,7 @@ public class BookingService implements BookingServiceInterface{
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking
     @Override
+    @Transactional
     public BookingDto create(Long customerId, Long bikeId, LocalDateTime startDate,
                                LocalDateTime endDate, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
@@ -137,6 +145,7 @@ public class BookingService implements BookingServiceInterface{
 
     //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
     @Override
+    @Transactional
     public BookingDto changeBooking(Long id, UpdateBookingDto dto) {
        var booking = bookingRepository.findById(id)
                .orElseThrow(() -> new ResourceNotFoundException("Hittade inte bokning med id " + id));
@@ -156,6 +165,7 @@ public class BookingService implements BookingServiceInterface{
 
     //Lista bokningar GET /api/v1/bookings?customerId={customerId}
     @Override
+    @Transactional
     public List<BookingDto> customerBooking(Long id) {
        logger.info("Lista bokning på kund med id " + id);
        List<Booking> bookings = bookingRepository.findByCustomerId(id);

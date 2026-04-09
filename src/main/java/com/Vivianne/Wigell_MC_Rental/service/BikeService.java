@@ -8,7 +8,6 @@ import com.Vivianne.Wigell_MC_Rental.repository.BikeRepository;
 import com.groupc.shared.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,9 +17,6 @@ import java.util.List;
 public class BikeService implements BikeServiceInterface {
 
 
-    //Behöver lägga in meddelanden om avd som händer
-    //ex när man raderar MC osv...
-
     private final BikeRepository bikeRepository;
     private final Logger logger = LoggerFactory.getLogger(BikeService.class);
     public BikeService(BikeRepository bikeRepository) {
@@ -28,6 +24,7 @@ public class BikeService implements BikeServiceInterface {
     }
 
     @Override
+    @Transactional
     public BikeDto createBike(BikeCreateDto dto) {
         logger.info("Skapar ny MC");
         Bike bike = Mapper.createBike(dto);
@@ -37,6 +34,7 @@ public class BikeService implements BikeServiceInterface {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
     if(!bikeRepository.existsById(id)) {
         throw new ResourceNotFoundException("Kunde inte hitta MC med id " + id);
@@ -46,6 +44,7 @@ public class BikeService implements BikeServiceInterface {
     }
     //PUT
     @Override
+    @Transactional
     public BikeDto update(Long id, BikeDto dto) {
         Bike bike = bikeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Kunde inte hitta MC med id " + id));
@@ -59,6 +58,7 @@ public class BikeService implements BikeServiceInterface {
     }
 
     @Override
+    @Transactional
     public List<BikeDto> listAll() {
         logger.info("Lista på alla MC");
         return bikeRepository.findAll()
@@ -69,6 +69,7 @@ public class BikeService implements BikeServiceInterface {
     }
 
     @Override
+    @Transactional
     public BikeDto findById(Long id) {
         logger.info("Hämtar MC med id " + id);
         return bikeRepository.findById(id)

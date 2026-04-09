@@ -31,7 +31,7 @@ public class KeycloakUserService {
     }
 
     public String createUserAndAssignRole(String firstName, String lastName,
-                                          String username, String password) {
+                                          String username, String password, String role) {
         var userResource = realm().users();
 //        var existsId = user.searchByUsername(username, true).stream()
 //                .filter(u -> username.equalsIgnoreCase(u.getUsername()))
@@ -61,13 +61,19 @@ public class KeycloakUserService {
             userResource.get(userId).resetPassword(cred);
 
             //tilldela rollen
-            RoleRepresentation userRole = realm().roles().get("USER").toRepresentation();
-            userResource.get(userId).roles().realmLevel().add(List.of(userRole));
+            assignRole(userId, role);
 
             logger.info("Ny användare skapad");
 
             return userId;
         }
+    }
+
+    public void assignRole(String userId, String role) {
+        //tilldela rollen
+        RoleRepresentation userRole = realm().roles().get(role).toRepresentation();
+        keycloak.realm(realm).users().get(userId).roles().realmLevel().add(List.of(userRole));
+        logger.info("Lagt till rollen '{}'", role);
     }
 
     public void updateUserProfile(String userId, UpdateUserDto profile) {

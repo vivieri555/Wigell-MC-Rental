@@ -21,7 +21,6 @@ public class AvailableController {
     private final BookingService bookingService;
     public AvailableController(BookingService bookingService) { this.bookingService = bookingService; }
 
-    //Kanske lägga in validering så att slutdatum inte kan vara före startdaumet?
     //Lista lediga motorcyklar
     @GetMapping("/availability")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
