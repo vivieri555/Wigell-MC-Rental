@@ -1,9 +1,7 @@
 package com.Vivianne.Wigell_MC_Rental.service;
 
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateUserDto;
-import com.Vivianne.Wigell_MC_Rental.entity.Address;
 import com.groupc.shared.exception.ResourceNotFoundException;
-import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
@@ -30,8 +28,8 @@ public class KeycloakUserService {
         this.realm = realm;
     }
 
-    public String createUserAndAssignRole(String firstName, String lastName,
-                                          String username, String password, String role) {
+    public String createUserKeycloak(String firstName, String lastName,
+                                     String username, String password, String role) {
         var userResource = realm().users();
 //        var existsId = user.searchByUsername(username, true).stream()
 //                .filter(u -> username.equalsIgnoreCase(u.getUsername()))

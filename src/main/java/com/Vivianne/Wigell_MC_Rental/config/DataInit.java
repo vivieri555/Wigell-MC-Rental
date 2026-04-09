@@ -49,20 +49,21 @@ public class DataInit {
                 List<Address> gasvagen109List = new ArrayList<>();
                 gasvagen109List.add(gasvagen109);
 
-                String admin = keycloakUserService.createUserAndAssignRole("Vivianne", "Eriksson", "vivi@email.se", "password", "ADMIN");
+                try {
+                String admin = keycloakUserService.createUserKeycloak("Vivianne", "Eriksson", "vivi@email.se", "password", "ADMIN");
                 Customer customer1 = new Customer("Vivianne", "Eriksson", "0707000000", address1List
                         , "vivi@email.se", admin);
 
-                String alexandra1 = keycloakUserService.createUserAndAssignRole("Alexandra", "Andersson", "alexandra@live.com", "password", "USER");
+                String alexandra1 = keycloakUserService.createUserKeycloak("Alexandra", "Andersson", "alexandra@live.com", "password", "USER");
                 Customer customer2 = new Customer("Alexandra", "Andersson", "0789634365", simtuna3List, "alexandra@live.com", alexandra1);
 
-                String pelle3 = keycloakUserService.createUserAndAssignRole("Pelle", "Nordin", "pelle.storhammar@telia.com", "password", "USER");
+                String pelle3 = keycloakUserService.createUserKeycloak("Pelle", "Nordin", "pelle.storhammar@telia.com", "password", "USER");
                 Customer customer3 = new Customer("Pelle", "Nordin", "0765437568", kungsgatan54List, "pelle.storhammar@telia.com", pelle3);
 
-                String roger = keycloakUserService.createUserAndAssignRole("Roger", "Nordin","nordin@hotmail.com", "password", "USER");
+                String roger = keycloakUserService.createUserKeycloak("Roger", "Nordin","nordin@hotmail.com", "password", "USER");
                 Customer customer4 = new Customer("Roger", "Nordin", "085453486", kungsgatan54List, "nordin@hotmail.com", roger);
 
-                String anders = keycloakUserService.createUserAndAssignRole("Anders", "Hammar", "as@live.com", "password", "USER");
+                String anders = keycloakUserService.createUserKeycloak("Anders", "Hammar", "as@live.com", "password", "USER");
                 Customer customer5 = new Customer("Anders", "Hammar", "0763355899", gasvagen109List, "as@live.com", anders);
                 customerRepo.saveAll(List.of(customer1, customer2, customer3, customer4, customer5));
                 logger.info("Lagt till nya medlemmar");
@@ -79,7 +80,12 @@ public class DataInit {
                         LocalDateTime.of(2026, 4, 30, 12, 30), Set.of(Available.CONFIRMED));
                 BookingDto booking2 = bookingService.create(customer1.getId(),bike4.getId(), LocalDateTime.of(2026, 4, 9, 12, 1),
                         LocalDateTime.now(), Set.of(Available.CONFIRMED));
-               logger.info("Bokningar sparade " + booking1 + ", " + booking2);
+               logger.info("Bokningar sparade " + booking1 + ", " + booking2); }
+                catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
+            } else {
+                logger.info("Finns redan data");
             }
         };
     }

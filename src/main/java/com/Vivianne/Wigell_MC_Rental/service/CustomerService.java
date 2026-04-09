@@ -50,7 +50,7 @@ public class CustomerService implements CustomerServiceInterface {
             throw new RuntimeException("Användarnamnet finns redan");
         }
 
-        String keycloakId = keycloakUserService.createUserAndAssignRole(
+        String keycloakId = keycloakUserService.createUserKeycloak(
                 dto.firstName(),
                 dto.lastName(),
                 dto.username(),
