@@ -51,8 +51,8 @@ public class DataInit {
 
                 try {
                 String admin = keycloakUserService.createUserKeycloak("Vivianne", "Eriksson", "vivi@email.se", "password", "ADMIN");
-                Customer customer1 = new Customer("Vivianne", "Eriksson", "0707000000", address1List
-                        , "vivi@email.se", admin);
+                    Customer customer1 = new Customer("Vivianne", "Eriksson", "0707000000", address1List
+                            , "vivi@email.se", admin);
 
                 String alexandra1 = keycloakUserService.createUserKeycloak("Alexandra", "Andersson", "alexandra@live.com", "password", "USER");
                 Customer customer2 = new Customer("Alexandra", "Andersson", "0789634365", simtuna3List, "alexandra@live.com", alexandra1);
@@ -65,15 +65,17 @@ public class DataInit {
 
                 String anders = keycloakUserService.createUserKeycloak("Anders", "Hammar", "as@live.com", "password", "USER");
                 Customer customer5 = new Customer("Anders", "Hammar", "0763355899", gasvagen109List, "as@live.com", anders);
-                customerRepo.saveAll(List.of(customer1, customer2, customer3, customer4, customer5));
+                    customerRepo.saveAll(List.of(customer1, customer2, customer3, customer4, customer5));
+                    customerRepo.flush();
                 logger.info("Lagt till nya medlemmar");
 
-                Bike bike1 = new Bike("Kawasaki", "Turbo22", "Manuell", "2025", BigDecimal.valueOf(1255));
-                Bike bike2 = new Bike("BMW", "i9", "Manuell", "2026", BigDecimal.valueOf(1300));
-                Bike bike3 = new Bike("Yamaha", "MT", "Automat", "2024", BigDecimal.valueOf(1500));
-                Bike bike4 = new Bike("Harley-Davidson", "Iron 883", "Manuell", "2023", BigDecimal.valueOf(1100));
-                Bike bike5 = new Bike("Triumph tiger", "800 XC", "Manuell", "2026", BigDecimal.valueOf(1450));
-                bikeRepo.saveAll(List.of(bike1, bike2, bike3, bike4, bike5));
+
+                    Bike bike1 = new Bike("Kawasaki", "Turbo22", "Manuell", "2025", BigDecimal.valueOf(1255));
+                    Bike bike2 = new Bike("BMW", "i9", "Manuell", "2026", BigDecimal.valueOf(1300));
+                    Bike bike3 = new Bike("Yamaha", "MT", "Automat", "2024", BigDecimal.valueOf(1500));
+                    Bike bike4 = new Bike("Harley-Davidson", "Iron 883", "Manuell", "2023", BigDecimal.valueOf(1100));
+                    Bike bike5 = new Bike("Triumph tiger", "800 XC", "Manuell", "2026", BigDecimal.valueOf(1450));
+                    bikeRepo.saveAll(List.of(bike1, bike2, bike3, bike4, bike5));
                 logger.info("Sparat MC i db");
 
                 BookingDto booking1 = bookingService.create(customer5.getId(), bike5.getId(), LocalDateTime.now(),
