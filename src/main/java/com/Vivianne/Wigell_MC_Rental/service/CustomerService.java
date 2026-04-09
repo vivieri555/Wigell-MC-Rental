@@ -53,8 +53,6 @@ public class CustomerService implements CustomerServiceInterface {
         String keycloakId = keycloakUserService.createUserAndAssignRole(
                 dto.firstName(),
                 dto.lastName(),
-                dto.phone(),
-                dto.address(),
                 dto.username(),
                 dto.password()
         );

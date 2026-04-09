@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static com.Vivianne.Wigell_MC_Rental.entity.Available.CONFIRMED;
+
 @Service
 public class BookingService implements BookingServiceInterface{
    private final BookingRepository bookingRepository;
@@ -126,7 +128,7 @@ public class BookingService implements BookingServiceInterface{
         BigDecimal totalPriceGBP = totalPriceSEK.multiply(BigDecimal.valueOf(exchangeRate))
                 .setScale(2, RoundingMode.HALF_UP);
 
-        Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, status);
+        Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, Set.of(CONFIRMED));
                 Booking saved = bookingRepository.save(booking);
                 logger.info("Nu är det bokat");
         return Mapper.toBookingDto(saved);

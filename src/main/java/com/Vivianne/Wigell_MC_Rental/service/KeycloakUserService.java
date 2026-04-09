@@ -30,8 +30,8 @@ public class KeycloakUserService {
         this.realm = realm;
     }
 
-    public String createUserAndAssignRole(String firstName, String lastName, String phone,
-                                          Address address, String username, String password) {
+    public String createUserAndAssignRole(String firstName, String lastName,
+                                          String username, String password) {
         var userResource = realm().users();
 //        var existsId = user.searchByUsername(username, true).stream()
 //                .filter(u -> username.equalsIgnoreCase(u.getUsername()))

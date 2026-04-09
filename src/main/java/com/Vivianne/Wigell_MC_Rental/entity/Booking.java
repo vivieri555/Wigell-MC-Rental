@@ -35,7 +35,6 @@ public class Booking {
     )
     @JoinColumn(
             name = "bike_id",
-            unique = true,
             foreignKey = @ForeignKey(name = "fk_booking_bike")
     )
     private Bike bike;
@@ -47,7 +46,6 @@ public class Booking {
     )
     @JoinColumn(
             name = "customer_id",
-            unique = true,
             foreignKey = @ForeignKey(name = "fk_booking_customer")
     )
     private Customer customer;

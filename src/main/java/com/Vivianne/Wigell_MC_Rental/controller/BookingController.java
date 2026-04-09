@@ -21,11 +21,9 @@ import java.util.Set;
 public class BookingController {
 
     private final BookingService bookingService;
-    private final BikeService bikeService;
 
-    public BookingController(BookingService bookingService, BikeService bikeService) {
+    public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
-        this.bikeService = bikeService;
     }
     //Ändra i metoder för BookingDto till BookingCreateDto  ??
     @PostMapping
