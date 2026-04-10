@@ -19,7 +19,7 @@ public final class Mapper {
     }
     public static Customer fromCreate(CustomerCreateDto createDto, String keycloakId) {
         return new Customer(createDto.firstName(), createDto.lastName(),
-                createDto.phone(), (List<Address>) createDto.address(), createDto.username(), createDto.keycloakUserId());
+                createDto.phone(), (List<Address>) createDto.address(), createDto.username(), keycloakId);
     }
     public static Address createAddress(AddressCreateDto address) {
         return new Address(address.street(), address.city(), address.postalCode());

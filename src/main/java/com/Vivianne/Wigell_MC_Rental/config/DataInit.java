@@ -39,18 +39,25 @@ public class DataInit {
                 List<Address> address1List = new ArrayList<>();
                 addressRepo.save(address1);
                 address1List.add(address1);
+
                 Address simtuna3 = new Address("Simtuna 3", "Enköping", "74951");
                 List<Address> simtuna3List = new ArrayList<>();
                 simtuna3List.add(simtuna3);
+                addressRepo.save(simtuna3);
+
                 Address kungsgatan54 = new Address("Kungsgatan 54", "Sundsvall", "84555");
                 List<Address> kungsgatan54List = new ArrayList<>();
                 kungsgatan54List.add(kungsgatan54);
+                addressRepo.save(kungsgatan54);
+
                 Address gasvagen109 = new Address("Gasvägen 109", "Gävle", "74821");
                 List<Address> gasvagen109List = new ArrayList<>();
                 gasvagen109List.add(gasvagen109);
+                addressRepo.save(gasvagen109);
 
                 try {
-                String admin = keycloakUserService.createUserKeycloak("Vivianne", "Eriksson", "vivi@email.se", "password", "ADMIN");
+
+                String admin = keycloakUserService.createUserKeycloak("Vivianne", "Eriksson", "vivi@hotmail.se", "password", "ADMIN");
                     Customer customer1 = new Customer("Vivianne", "Eriksson", "0707000000", address1List
                             , "vivi@email.se", admin);
 
@@ -78,11 +85,13 @@ public class DataInit {
                     bikeRepo.saveAll(List.of(bike1, bike2, bike3, bike4, bike5));
                 logger.info("Sparat MC i db");
 
+
                 BookingDto booking1 = bookingService.create(customer5.getId(), bike5.getId(), LocalDateTime.now(),
                         LocalDateTime.of(2026, 4, 30, 12, 30), Set.of(Available.CONFIRMED));
                 BookingDto booking2 = bookingService.create(customer1.getId(),bike4.getId(), LocalDateTime.of(2026, 4, 9, 12, 1),
                         LocalDateTime.now(), Set.of(Available.CONFIRMED));
-               logger.info("Bokningar sparade " + booking1 + ", " + booking2); }
+               logger.info("Bokningar sparade " + booking1 + ", " + booking2);
+               }
                 catch (Exception e) {
                     logger.error(e.getMessage());
                 }

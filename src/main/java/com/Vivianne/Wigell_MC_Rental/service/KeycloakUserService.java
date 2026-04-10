@@ -23,7 +23,7 @@ public class KeycloakUserService {
     private final String realm;
     private final Logger logger = LoggerFactory.getLogger(KeycloakUserService.class);
 
-    public KeycloakUserService(Keycloak keycloak, @Value("${keycloak.realm}") String realm) {
+    public KeycloakUserService(Keycloak keycloak, @Value("${keycloak.admin.realm}") String realm) {
         this.keycloak = keycloak;
         this.realm = realm;
     }
@@ -36,6 +36,11 @@ public class KeycloakUserService {
 //                .map(UserRepresentation::getId)
 //                .findFirst()
 //                .orElseThrow(() -> new ResourceNotFoundException("Användaren finns redan"));
+        List<UserRepresentation> existingUsers = userResource.searchByUsername(username, true);
+        if (!existingUsers.isEmpty()) {
+            logger.info("Användaren '{}' finns redan i Keycloak", username);
+            return existingUsers.get(0).getId();
+        }
         //Skapa användare
         var userRep = new UserRepresentation();
         userRep.setUsername(username);
@@ -43,9 +48,10 @@ public class KeycloakUserService {
         userRep.setLastName(lastName);
         userRep.setEnabled(true);
 
-        //statusar?
-
         try (var response = userResource.create(userRep)) {
+            if (response.getStatus() == 409) {
+                return userResource.searchByUsername(username, true).get(0).getUsername();
+            }
             if (response.getStatus() != 201) {
                 throw new ResourceNotFoundException("Kunde inte skapa användare, Status: " + response.getStatus());
             }
@@ -64,13 +70,15 @@ public class KeycloakUserService {
             logger.info("Ny användare skapad");
 
             return userId;
-        }
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+        } return existingUsers.getFirst().getUsername();
     }
 
     public void assignRole(String userId, String role) {
         //tilldela rollen
         RoleRepresentation userRole = realm().roles().get(role).toRepresentation();
-        keycloak.realm(realm).users().get(userId).roles().realmLevel().add(List.of(userRole));
+        realm().users().get(userId).roles().realmLevel().add(List.of(userRole));
         logger.info("Lagt till rollen '{}'", role);
     }
 
