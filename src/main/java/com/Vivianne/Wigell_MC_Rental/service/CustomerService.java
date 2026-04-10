@@ -10,6 +10,7 @@ import com.groupc.shared.exception.ResourceNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
+    @Transactional
     public List<CustomerDto> listAll() {
         logger.info("Lista alla kunder");
         return customerRepository.findAll()
@@ -37,6 +39,7 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
+    @Transactional
     public CustomerDto findById(Long id) {
         logger.info("Hitta kund med id " + id);
         return customerRepository.findById(id)
@@ -45,6 +48,7 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
+    @Transactional
     public CustomerDto create(CustomerCreateDto dto) {
         if(customerRepository.existsByUsername(dto.username())) {
             throw new RuntimeException("Användarnamnet finns redan");
@@ -65,6 +69,7 @@ public class CustomerService implements CustomerServiceInterface {
     }
 
     @Override
+    @Transactional
     public void deleteCustomer(Long id) {
     if(!customerRepository.existsById(id)) {
     throw new RuntimeException("Kund med id " + id + " existerar inte");
@@ -77,6 +82,7 @@ public class CustomerService implements CustomerServiceInterface {
 
     //PUT metoden
     @Override
+    @Transactional
     public CustomerDto update(CustomerDto dto, Long id) {
         Customer customer = customerRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Kund hittades inte med id " + id));

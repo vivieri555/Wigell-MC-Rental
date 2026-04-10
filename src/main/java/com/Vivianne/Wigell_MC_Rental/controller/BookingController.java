@@ -24,7 +24,7 @@ public class BookingController {
     public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
-    //Ändra i metoder för BookingDto till BookingCreateDto  ??
+
     @PostMapping
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<BookingDto> create(Long customerId, Long bikeId, LocalDateTime startDate,

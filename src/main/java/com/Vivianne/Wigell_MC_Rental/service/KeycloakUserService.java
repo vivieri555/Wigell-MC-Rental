@@ -31,11 +31,7 @@ public class KeycloakUserService {
     public String createUserKeycloak(String firstName, String lastName,
                                      String username, String password, String role) {
         var userResource = realm().users();
-//        var existsId = user.searchByUsername(username, true).stream()
-//                .filter(u -> username.equalsIgnoreCase(u.getUsername()))
-//                .map(UserRepresentation::getId)
-//                .findFirst()
-//                .orElseThrow(() -> new ResourceNotFoundException("Användaren finns redan"));
+
         List<UserRepresentation> existingUsers = userResource.searchByUsername(username, true);
         if (!existingUsers.isEmpty()) {
             logger.info("Användaren '{}' finns redan i Keycloak", username);
