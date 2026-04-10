@@ -2470,3 +2470,1408 @@ java.lang.IllegalStateException: No Docker Compose file found in directory 'C:\U
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
 	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
+2026-04-10 10:49:09 [main] INFO  c.V.W.WigellMcRentalApplication - Starting WigellMcRentalApplication using Java 24.0.2 with PID 23224 (C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\target\classes started by Vivi in C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental)
+2026-04-10 10:49:09 [main] INFO  c.V.W.WigellMcRentalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-10 10:49:09 [main] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\docker-compose.yml
+2026-04-10 10:49:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli - time="2026-04-10T10:49:11+02:00" level=warning msg="C:\\Users\\Vivi\\IdeaProjects\\CGrupp\\Wigell-MC-Rental\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2026-04-10 10:49:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Image mysql:8.0 Pulling 
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  cd8097e7c26b Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  0940ecf5daec Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  5915b0e5580c Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  1378718ee973 Pulling fs layer 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  de0490608ca2 Downloading 34.91kB
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  de0490608ca2 Downloading 34.91kB
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Downloading 883B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  cd8097e7c26b Downloading 5.328kB
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  de0490608ca2 Download complete 0B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Downloading 883B
+2026-04-10 10:49:17 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  0940ecf5daec Downloading 122B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  1378718ee973 Downloading 2.604kB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  cd8097e7c26b Downloading 5.328kB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  0940ecf5daec Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  5915b0e5580c Downloading 332B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  cd8097e7c26b Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Downloading 318B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  1378718ee973 Downloading 2.604kB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Downloading 318B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  1378718ee973 Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  5915b0e5580c Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Download complete 0B
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:18 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Downloading 278.5kB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Downloading 783.5kB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Download complete 0B
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:19 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 1.049MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 1.311MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 4.194MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 4.194MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 2.097MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 3.146MB
+2026-04-10 10:49:20 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 3.146MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 6.291MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 6.291MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 6.291MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 6.291MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 5.243MB
+2026-04-10 10:49:21 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 4.194MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 6.17MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Downloading 6.17MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Download complete 0B
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 8.389MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 5.243MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 8.389MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 8.389MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 9.437MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 9.437MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 8.29MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 6.291MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 8.389MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 7.34MB
+2026-04-10 10:49:22 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 6.291MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 7.34MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 10.28MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 7.34MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 7.34MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 7.34MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 7.34MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 11.53MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 9.437MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 11.53MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 10.49MB
+2026-04-10 10:49:23 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 8.389MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 9.437MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 10.78MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 9.437MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 9.437MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 9.437MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 11.53MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 14.68MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 12.58MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 14.68MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 14.68MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 10.49MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 13.63MB
+2026-04-10 10:49:24 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 12.58MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 14.68MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 11.53MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 11.53MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Downloading 14.96MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 11.53MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  2f1dcce71f1f Download complete 0B
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 16.78MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 12.58MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 14.68MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 16.78MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 12.58MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 16.78MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 12.58MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 14.68MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 14.68MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 17.83MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 12.58MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 17.83MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 17.83MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 13.63MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 15.73MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 18.87MB
+2026-04-10 10:49:25 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 13.63MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 18.87MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 14.68MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 16.78MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 19.92MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 14.68MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 16.78MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 17.83MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 19.92MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 14.68MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 17.83MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 19.92MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 15.73MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 17.83MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 20.97MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 15.73MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 20.97MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 15.73MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 18.87MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 18.87MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 22.02MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 16.78MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 16.78MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 19.92MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 22.02MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 17.83MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 19.92MB
+2026-04-10 10:49:26 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 23.07MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 17.83MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 19.92MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 23.07MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 20.97MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 23.07MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 17.83MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 24.12MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 18.87MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 20.97MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 24.12MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 18.87MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 20.97MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 24.12MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 18.87MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 20.99MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 22.02MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 25.17MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 19.92MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 22.02MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 25.17MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 19.92MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 19.92MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 23.07MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 25.17MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 25.17MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 19.92MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 23.07MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 26.21MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 20.97MB
+2026-04-10 10:49:27 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 20.97MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 20.97MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 24.12MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 27.26MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 21.23MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 24.12MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 27.26MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 22.02MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 25.17MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 28.31MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 22.02MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 25.17MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 28.31MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 28.31MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 29.36MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 29.36MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 23.07MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 26.21MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 30.41MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 24.12MB
+2026-04-10 10:49:28 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 30.41MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 24.12MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 25.17MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 30.41MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 31.46MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 25.17MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 31.46MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 25.17MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 28.31MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 28.98MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 32.51MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 26.21MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 32.51MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 26.21MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 29.36MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 33.55MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 26.21MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 29.36MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 30.41MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 33.55MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 33.55MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 30.41MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 30.41MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 34.6MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 27.26MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 34.6MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 28.31MB
+2026-04-10 10:49:29 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 31.46MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 31.46MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 35.65MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 28.31MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 35.65MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 28.31MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 31.46MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 36.7MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 29.36MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 32.51MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 29.36MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 32.51MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 36.7MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 37.75MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 29.36MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 32.51MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 33.55MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 37.75MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 30.41MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 37.75MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 30.41MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 33.55MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 34.6MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 38.8MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 30.41MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 38.8MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 31.46MB
+2026-04-10 10:49:30 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 34.6MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 34.6MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 38.8MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 31.46MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 31.46MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 35.65MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 39.85MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 39.85MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 32.51MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 35.65MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 40.89MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 32.51MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 35.65MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 36.7MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 40.89MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 33.55MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 33.55MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 36.7MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 41.94MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 41.94MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 34.6MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 37.75MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 42.99MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 34.6MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 37.75MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 37.75MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 42.99MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 34.6MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 37.75MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 42.99MB
+2026-04-10 10:49:31 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 35.65MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 44.04MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 35.65MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 38.8MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 38.8MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 44.04MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 35.65MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 44.04MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 35.65MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 38.8MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 36.7MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 38.8MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 44.04MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 39.85MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 45.09MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 36.7MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 45.09MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 36.7MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 39.85MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 37.75MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 39.85MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 45.09MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 46.14MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 37.75MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 39.85MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 46.14MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 37.75MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 40.89MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 40.89MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 46.14MB
+2026-04-10 10:49:32 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 38.8MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 40.89MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 46.14MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 38.8MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 46.14MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 38.8MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 41.94MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 38.8MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 41.94MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 38.8MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 41.94MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 39.85MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 41.94MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 39.85MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 42.99MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 40.89MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 42.99MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 40.89MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 44.04MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Downloading 47.31MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Download complete 0B
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 41.14MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 44.04MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 45.09MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 41.94MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 45.09MB
+2026-04-10 10:49:33 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 41.94MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 45.09MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 41.94MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 41.94MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 45.09MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 42.99MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 45.09MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 42.99MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 46.14MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 46.14MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 42.99MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 44.04MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 47.19MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 44.04MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 47.19MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 44.62MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 48.23MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 1B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 45.09MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 48.23MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 46.14MB
+2026-04-10 10:49:34 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.28MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.92MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 46.14MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 46.19MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.92MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 47.19MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.92MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.92MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 47.19MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Downloading 49.92MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 47.19MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 48.23MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 48.23MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Download complete 0B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 2B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 48.23MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 49.28MB
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:35 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 50.33MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 50.33MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 51.38MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 52.43MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 52.43MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 53.48MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 53.48MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 54.53MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 55.57MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 3B
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 55.57MB
+2026-04-10 10:49:36 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 56.62MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 56.62MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 57.67MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 58.72MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 58.72MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 59.77MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 60.2MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 60.82MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 4B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 61.87MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 62.91MB
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:37 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 62.91MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 63.96MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 63.96MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 65.01MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 65.01MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 66.06MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 66.06MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 67.11MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 68.16MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 5B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 68.16MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 69.21MB
+2026-04-10 10:49:38 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 70.25MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 71.3MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 71.3MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 72.35MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 73.4MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 73.4MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 74.45MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 74.45MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 6B
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 75.5MB
+2026-04-10 10:49:39 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 7B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 76.55MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Extracting 7B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 77.59MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  d4c7048d1cf1 Pull complete 0B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 77.59MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 78.64MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  6375ec02106f Pull complete 0B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 78.64MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 79.69MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  771773a1fe7a Pull complete 0B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 79.69MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 80.74MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 81.79MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 81.79MB
+2026-04-10 10:49:40 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 82.84MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 82.84MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 83.89MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  c3b8cfb10b41 Pull complete 0B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 84.93MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  1378718ee973 Pull complete 0B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 84.93MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  5915b0e5580c Pull complete 0B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 85.98MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 85.98MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 87.03MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 87.03MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 88.08MB
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:41 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 89.13MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 89.38MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 90.18MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 91.23MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 91.23MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 1B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 92.19MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 92.27MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 92.49MB
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:42 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 94.37MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 94.37MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 95.42MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 96.47MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 96.47MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 97.52MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 2B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 98.57MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 98.57MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 99.61MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 100.7MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 100.8MB
+2026-04-10 10:49:43 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 101.7MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 101.7MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 101.7MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 101.8MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 103.8MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 3B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 103.8MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 104.9MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 105.9MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 105.9MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 107MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 107MB
+2026-04-10 10:49:44 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 108MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 108.2MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 109.1MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 109.5MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 4B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 109.5MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 110.7MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 110.7MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 111.1MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 111.2MB
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:45 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 112.1MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 113.2MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 114.3MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 115.3MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 116.4MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 5B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 116.4MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 117.4MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 118.5MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 118.5MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 119.5MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 119.5MB
+2026-04-10 10:49:46 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 120.6MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 121.6MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 122.7MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 122.7MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 6B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 123.7MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 123.7MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 124.8MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 124.8MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 125.8MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 125.8MB
+2026-04-10 10:49:47 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Extracting 7B
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 125.8MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Extracting 1B
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  60c3210ab1f6 Pull complete 0B
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 126.9MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  440208b3f29f Pull complete 0B
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:48 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Downloading 128.1MB
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Download complete 0B
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:49 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 1B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:50 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 2B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:51 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 3B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:52 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 4B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:53 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:54 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 5B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 6B
+2026-04-10 10:49:55 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 7B
+2026-04-10 10:49:56 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 8B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:57 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 9B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:58 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 10B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:49:59 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 11B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:00 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 12B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:01 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 13B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:02 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 14B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:03 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 15B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:04 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 16B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:05 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Extracting 17B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  cd8097e7c26b Pull complete 0B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  10ee8ef3b9fc Pull complete 0B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  0940ecf5daec Pull complete 0B
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Image mysql:8.0 Pulled 
+2026-04-10 10:50:06 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Network wigell-mc-rental_default Creating 
+2026-04-10 10:50:07 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Network wigell-mc-rental_default Created 
+2026-04-10 10:50:07 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Volume wigell_mc_db_data Creating 
+2026-04-10 10:50:07 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Volume wigell_mc_db_data Created 
+2026-04-10 10:50:07 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Creating 
+2026-04-10 10:50:10 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Created 
+2026-04-10 10:50:10 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Starting 
+2026-04-10 10:50:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Started 
+2026-04-10 10:50:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Waiting 
+2026-04-10 10:50:12 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Healthy 
+2026-04-10 10:50:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10 10:50:23 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 179 ms. Found 4 JPA repository interfaces.
+2026-04-10 10:50:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8585 (http)
+2026-04-10 10:50:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-10 10:50:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-04-10 10:50:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-10 10:50:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9696 ms
+2026-04-10 10:50:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10 10:50:30 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.44.Final
+2026-04-10 10:50:30 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-10 10:50:31 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-10 10:50:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-10 10:50:33 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2026-04-10 10:50:33 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-04-10 10:50:33 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:334)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:974)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 35 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:590)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:515)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:410)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1332)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 48 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:58)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:72)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:54)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:36)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:584)
+	... 54 common frames omitted
+2026-04-10 10:50:33 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-10 10:50:33 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-10 10:50:37 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-10 10:50:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-10 10:50:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2026-04-10 10:50:38 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-04-10 10:50:38 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2026-04-10 10:50:38 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2026-04-10 10:50:38 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-10 10:50:38 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-10 10:50:38 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:974)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:364)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.getIsolatedConnection(GenerationTargetToDatabase.java:60)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:112)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:79)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:479)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:245)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:218)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	... 19 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:370)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:207)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:485)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 42 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:590)
+	at com.mysql.cj.protocol.a.NativeProtocol.readServerCapabilities(NativeProtocol.java:515)
+	at com.mysql.cj.protocol.a.NativeProtocol.beforeHandshake(NativeProtocol.java:410)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1332)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:155)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 55 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:58)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeaderLocal(SimplePacketReader.java:72)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:54)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:36)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:584)
+	... 61 common frames omitted
+2026-04-10 10:53:08 [main] INFO  c.V.W.WigellMcRentalApplication - Starting WigellMcRentalApplication using Java 24.0.2 with PID 16000 (C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\target\classes started by Vivi in C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental)
+2026-04-10 10:53:08 [main] INFO  c.V.W.WigellMcRentalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-10 10:53:08 [main] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\docker-compose.yml
+2026-04-10 10:53:10 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli - time="2026-04-10T10:53:09+02:00" level=warning msg="C:\\Users\\Vivi\\IdeaProjects\\CGrupp\\Wigell-MC-Rental\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2026-04-10 10:53:10 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Recreate 
+2026-04-10 10:53:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Recreated 
+2026-04-10 10:53:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Starting 
+2026-04-10 10:53:11 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli - Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:3306 -> 127.0.0.1:0: listen tcp 0.0.0.0:3306: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2026-04-10 10:53:11 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.docker.compose.core.ProcessExitException: 'docker compose --file C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\docker-compose.yml --ansi never up --no-color --detach --wait' failed with exit code 1.
+
+Stdout:
+
+
+Stderr:
+time="2026-04-10T10:53:09+02:00" level=warning msg="C:\\Users\\Vivi\\IdeaProjects\\CGrupp\\Wigell-MC-Rental\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container wigell-mc-rental-mysql Recreate 
+ Container wigell-mc-rental-mysql Recreated 
+ Container wigell-mc-rental-mysql Starting 
+Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:3306 -> 127.0.0.1:0: listen tcp 0.0.0.0:3306: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:97)
+	at org.springframework.boot.docker.compose.core.DockerCli.run(DockerCli.java:81)
+	at org.springframework.boot.docker.compose.core.DefaultDockerCompose.up(DefaultDockerCompose.java:56)
+	at org.springframework.boot.docker.compose.lifecycle.StartCommand.applyTo(StartCommand.java:51)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:131)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:98)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$4(SpringApplicationRunListeners.java:72)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:72)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:416)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
+2026-04-10 10:54:12 [main] INFO  c.V.W.WigellMcRentalApplication - Starting WigellMcRentalApplication using Java 24.0.2 with PID 29184 (C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\target\classes started by Vivi in C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental)
+2026-04-10 10:54:12 [main] INFO  c.V.W.WigellMcRentalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-10 10:54:12 [main] INFO  o.s.b.d.c.l.DockerComposeLifecycleManager - Using Docker Compose file C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\docker-compose.yml
+2026-04-10 10:54:13 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli -  Container wigell-mc-rental-mysql Starting 
+2026-04-10 10:54:13 [OutputReader-stderr] INFO  o.s.b.docker.compose.core.DockerCli - Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:3306 -> 127.0.0.1:0: listen tcp 0.0.0.0:3306: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2026-04-10 10:54:14 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.boot.docker.compose.core.ProcessExitException: 'docker compose --file C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\docker-compose.yml --ansi never up --no-color --detach --wait' failed with exit code 1.
+
+Stdout:
+
+
+Stderr:
+ Container wigell-mc-rental-mysql Starting 
+Error response from daemon: ports are not available: exposing port TCP 0.0.0.0:3306 -> 127.0.0.1:0: listen tcp 0.0.0.0:3306: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+
+	at org.springframework.boot.docker.compose.core.ProcessRunner.run(ProcessRunner.java:97)
+	at org.springframework.boot.docker.compose.core.DockerCli.run(DockerCli.java:81)
+	at org.springframework.boot.docker.compose.core.DefaultDockerCompose.up(DefaultDockerCompose.java:56)
+	at org.springframework.boot.docker.compose.lifecycle.StartCommand.applyTo(StartCommand.java:51)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:131)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:98)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$4(SpringApplicationRunListeners.java:72)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:72)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:416)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
