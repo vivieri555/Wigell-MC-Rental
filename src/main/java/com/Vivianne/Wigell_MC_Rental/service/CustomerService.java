@@ -110,7 +110,7 @@ public class CustomerService implements CustomerServiceInterface {
         return Mapper.toDto(customer);
     }
     public Customer findCustomer(Long customerId) {
-        logger.debug("Hitta kund");
+        logger.info("Hitta kund med id '{}'", customerId);
         return customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Hittar inte kund"));
     }

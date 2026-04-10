@@ -28,21 +28,21 @@ public class AddressService implements AddressServiceInterface {
     public AddressDto create(AddressCreateDto addressDto, Long customerId) {
         logger.info("Skapar adress på gata " + addressDto.street());
         var customer = customerService.findCustomer(customerId);
-        //Lägga till addressen för en customer?
 
         Address address = Mapper.createAddress(addressDto);
         Address saved = addressRepository.save(address);
 
-
         customer.getAddress().add(saved);
         customerRepository.save(customer);
 
+        logger.info("Adress skapad och tilldelad kund '{}'", customer);
         return Mapper.toAddressDto(saved);
     }
 
     @Override
     @Transactional
     public void deleteAddress(Long addressId, Long customerId) {
+        logger.warn("Radera address");
         if(!addressRepository.existsById(addressId)) {
             throw new ResourceNotFoundException("Adress med id " + addressId + " existerar inte");
         }
@@ -52,9 +52,8 @@ public class AddressService implements AddressServiceInterface {
                                 .findFirst()
                                         .orElseThrow(() -> new ResourceNotFoundException("Inte rätt adress"));
         customer.getAddress().remove(address);
+        logger.info("Raderar adressen med id " + addressId);
         customerRepository.save(customer);
         addressRepository.delete(address);
-
-        logger.info("Raderar adressen med id " + addressId);
     }
 }

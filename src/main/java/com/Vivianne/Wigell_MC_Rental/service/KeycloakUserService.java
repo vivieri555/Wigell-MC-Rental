@@ -63,7 +63,7 @@ public class KeycloakUserService {
             //tilldela rollen
             assignRole(userId, role);
 
-            logger.info("Ny användare skapad");
+            logger.info("Ny keycloak användare skapad");
 
             return userId;
         } catch (Exception ex) {
@@ -90,10 +90,12 @@ public class KeycloakUserService {
     if (profile.lastName() != null) {
         current.setLastName(profile.lastName());
     }
+    logger.info("Uppdaterar användaren '{}'", current.getUsername());
     u.update(current);
     }
 
     public void delete (String userId) {
+        logger.info("Tar bort keycloak användaren med id '{}'", userId);
         user(userId).remove();
     }
 

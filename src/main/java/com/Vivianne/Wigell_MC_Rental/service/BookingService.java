@@ -21,7 +21,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Set;
@@ -138,7 +137,7 @@ public class BookingService implements BookingServiceInterface{
 
         Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, Set.of(CONFIRMED));
                 Booking saved = bookingRepository.save(booking);
-                logger.info("Nu är det bokat");
+                logger.info("Nu är det bokat med bokningsid '{}'", saved.getId());
         return Mapper.toBookingDto(saved);
 
     }
@@ -159,7 +158,7 @@ public class BookingService implements BookingServiceInterface{
            booking.setBike(dto.bike());
        }
        var saved = bookingRepository.save(booking);
-       logger.info("Bokning uppdaterad");
+       logger.info("Bokning uppdaterad på bokningsid '{}'", saved.getId());
        return Mapper.toBookingDto(saved);
     }
 
@@ -172,30 +171,6 @@ public class BookingService implements BookingServiceInterface{
        return bookings.stream()
                .map(Mapper::toBookingDto)
                .collect(Collectors.toList());
-    }
-
-    public LocalDateTime rentalDate(String rentalDate) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime bookingDate;
-        try {
-            bookingDate = LocalDateTime.parse(rentalDate, formatter);
-            System.out.println("Påbörjar uthyrningen datumet " + bookingDate);
-        }
-        catch (Exception e) {
-            throw new ResourceNotFoundException("Ogiltigt uthyrningsdatum, fyll i åååå-mm-dd");
-        }
-        return bookingDate;
-    }
-    public LocalDateTime returnDate(String returnDate) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime returnD;
-        try {
-            returnD = LocalDateTime.parse(returnDate, formatter);
-            System.out.println("Återlämningsdatum: " + returnD);
-        } catch (Exception e) {
-            throw new ResourceNotFoundException("Ogiltigt returdatum, fyll i åååå-mm-dd");
-        }
-        return returnD;
     }
     public long dateDiff(LocalDateTime rentalDate, LocalDateTime returnDate) {
         return rentalDate.until(returnDate, ChronoUnit.DAYS);
