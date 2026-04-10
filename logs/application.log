@@ -2445,3 +2445,28 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'wigell_mc_db.customer_addres
 2026-04-10 09:48:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-10 09:48:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-04-10 09:48:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-10 10:47:24 [main] INFO  c.V.W.WigellMcRentalApplication - Starting WigellMcRentalApplication using Java 24.0.2 with PID 35524 (C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\target\classes started by Vivi in C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental)
+2026-04-10 10:47:24 [main] INFO  c.V.W.WigellMcRentalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-10 10:47:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: No Docker Compose file found in directory 'C:\Users\Vivi\IdeaProjects\CGrupp\Wigell-MC-Rental\.'
+	at org.springframework.util.Assert.state(Assert.java:101)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.getComposeFile(DockerComposeLifecycleManager.java:153)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:111)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53)
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:98)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$4(SpringApplicationRunListeners.java:72)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:72)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:416)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.Vivianne.Wigell_MC_Rental.WigellMcRentalApplication.main(WigellMcRentalApplication.java:12)
