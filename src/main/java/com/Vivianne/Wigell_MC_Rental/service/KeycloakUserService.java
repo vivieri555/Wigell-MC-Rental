@@ -35,7 +35,7 @@ public class KeycloakUserService {
         List<UserRepresentation> existingUsers = userResource.searchByUsername(username, true);
         if (!existingUsers.isEmpty()) {
             logger.info("Användaren '{}' finns redan i Keycloak", username);
-            return existingUsers.get(0).getId();
+            throw new RuntimeException("Kunde inte slutföra skapandet av användare i Keycloak");
         }
         //Skapa användare
         var userRep = new UserRepresentation();
@@ -67,8 +67,9 @@ public class KeycloakUserService {
 
             return userId;
         } catch (Exception ex) {
-            logger.error(ex.getMessage());
-        } return existingUsers.getFirst().getUsername();
+            logger.error("Ett fel uppstod vid skapande av Keycloak-användare: {}", ex.getMessage());
+            throw new RuntimeException("Kunde inte slutföra skapandet av användare i Keycloak");
+        } // return existingUsers.getFirst().getUsername();
     }
 
     public void assignRole(String userId, String role) {
