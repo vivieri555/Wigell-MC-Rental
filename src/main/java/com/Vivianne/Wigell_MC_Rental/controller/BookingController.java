@@ -27,11 +27,10 @@ public class BookingController {
 
     @PostMapping
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
-    public ResponseEntity<BookingDto> create(Long customerId, Long bikeId, LocalDateTime startDate,
-                                             LocalDateTime endDate, Set<Available> status) {
-    BookingDto book = bookingService.create(customerId, bikeId, startDate,
-            endDate, status);
-    URI location = URI.create("/api/v1/bookings" + book.id());
+    public ResponseEntity<BookingDto> create(@RequestBody BookingCreateDto dto) {
+    BookingDto book = bookingService.create(dto.customerId(), dto.bikeId(), dto.startDate(),
+            dto.endDate(), dto.available());
+    URI location = URI.create("/api/v1/bookings/" + book.id());
     return ResponseEntity.created(location).body(book);
     }
     @PatchMapping("/{bookingId}")
@@ -58,12 +57,13 @@ public class BookingController {
     }
     @PutMapping("/{bookingId}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<BookingDto> update(@PathVariable Long bookingId, BookingDto dto) {
+    public ResponseEntity<BookingDto> update(@PathVariable Long bookingId, @RequestBody BookingDto dto) {
         return ResponseEntity.ok().body(bookingService.update(bookingId, dto));
     }
     @DeleteMapping("/{bookingId}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<BookingDto> delete(@PathVariable Long bookingId) {
+    public ResponseEntity<Void> delete(@PathVariable Long bookingId) {
+        bookingService.deleteById(bookingId);
         return ResponseEntity.noContent().build();
     }
     @PatchMapping(value = "/{bookingId}", params = "type=available")

@@ -3,8 +3,10 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 
+import javax.print.attribute.HashPrintServiceAttributeSet;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -44,7 +46,7 @@ public class Booking {
     @CollectionTable(name = "booking_available", joinColumns = @JoinColumn(name = "available_id"))
     @Enumerated(EnumType.STRING)
     @Column(name = "available")
-    private Set<Available> available;
+    private Set<Available> available = new HashSet<>();
 
     @ManyToOne(optional = false,
     fetch = FetchType.LAZY)
@@ -62,6 +64,13 @@ public class Booking {
         this.endDate = endDate;
         this.priceSEK = priceSEK;
         this.totalPriceGBP = totalPriceGBP;
+        this.bike = bike;
+        this.customer = customer;
+        this.available = available;
+    }
+    public Booking(LocalDateTime startDate, LocalDateTime endDate, Bike bike, Customer customer, Set<Available> available) {
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.bike = bike;
         this.customer = customer;
         this.available = available;

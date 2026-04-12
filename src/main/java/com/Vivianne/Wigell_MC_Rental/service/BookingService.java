@@ -3,6 +3,7 @@ package com.Vivianne.Wigell_MC_Rental.service;
 import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
+import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.entity.Booking;
@@ -22,6 +23,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -70,9 +72,9 @@ public class BookingService implements BookingServiceInterface{
                 .orElseThrow(() -> new ResourceNotFoundException("Bokning hittades inte med id: " + id));
         booking.setStartDate(b.startDate());
         booking.setEndDate(b.endDate());
-        booking.setPriceSEK(b.price());
-        booking.setBike(b.bike());
-        booking.setCustomer(b.customer());
+        booking.setPriceSEK(b.priceSEK());
+//        booking.setBike(b.bikeId());
+//        booking.setCustomer(b.customerId());
         bookingRepository.save(booking);
         logger.info("Bokning uppdaterad för kunden");
         return Mapper.toBookingDto(booking);
@@ -108,7 +110,7 @@ public class BookingService implements BookingServiceInterface{
     @Override
     @Transactional
     public BookingDto create(Long customerId, Long bikeId, LocalDateTime startDate,
-                               LocalDateTime endDate, Set<Available> status) {
+                                   LocalDateTime endDate, Set<Available> status) {
         Customer customer = customerRepository.findById(customerId)
                 .orElseThrow(() -> new ResourceNotFoundException("Kund kunde inte hittas med id " + customerId));
 
@@ -119,7 +121,8 @@ public class BookingService implements BookingServiceInterface{
         if (isBusy) {
             throw new ResourceNotFoundException("MC är inte tillgänglig dessa datum");
         }
-
+        Set<Available> statusSet = new HashSet<>();
+        statusSet.add(Available.CONFIRMED);
         long days = dateDiff(startDate, endDate);
         if (days <= 0) days = 1;
         BigDecimal totalPriceSEK = bike.getDayPrice().multiply(BigDecimal.valueOf(days));
@@ -128,10 +131,12 @@ public class BookingService implements BookingServiceInterface{
         BigDecimal totalPriceGBP = totalPriceSEK.multiply(BigDecimal.valueOf(exchangeRate))
                 .setScale(2, RoundingMode.HALF_UP);
 
-        Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, Set.of(CONFIRMED));
+        Booking booking =  new Booking(startDate, endDate, totalPriceSEK, totalPriceGBP, bike, customer, statusSet);
                 Booking saved = bookingRepository.save(booking);
+
+                var booked = Mapper.toBookingDto(bookingRepository.save(saved));
                 logger.info("Nu är det bokat med bokningsid '{}'", saved.getId());
-        return Mapper.toBookingDto(saved);
+        return booked;
 
     }
 

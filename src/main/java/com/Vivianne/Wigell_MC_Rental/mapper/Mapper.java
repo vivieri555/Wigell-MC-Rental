@@ -34,10 +34,10 @@ public final class Mapper {
         return new Bike(bikeDto.brand(), bikeDto.model(), bikeDto.gearbox(), bikeDto.year(), bikeDto.dayPrice());
     }
     public static BookingDto toBookingDto(Booking booking) {
-        return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPriceSEK(),
-                booking.getBike(), booking.getCustomer(), booking.getAvailable());
+        return new BookingDto(booking.getId(), booking.getStartDate(), booking.getEndDate(), booking.getPriceSEK(), booking.getTotalPriceGBP(),
+                booking.getBike().getId(), booking.getCustomer().getId(), booking.getAvailable());
     }
-    public static Booking createBooking(BookingCreateDto bDto) {
-        return new Booking(bDto.startDate(), bDto.endDate(), bDto.priceSEK(), bDto.totalPriceGBP(), bDto.bike(), bDto.customer(), bDto.available());
+    public static BookingCreateDto createBooking(Booking bDto) {
+        return new BookingCreateDto(bDto.getStartDate(), bDto.getEndDate(), bDto.getBike().getId(), bDto.getCustomer().getId(), bDto.getAvailable());
     }
 }
