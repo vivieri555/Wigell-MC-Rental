@@ -2,7 +2,9 @@ package com.Vivianne.Wigell_MC_Rental.service;
 
 import com.Vivianne.Wigell_MC_Rental.dto_create.BikeCreateDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BikeDto;
+import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface BikeServiceInterface {
@@ -11,4 +13,5 @@ public interface BikeServiceInterface {
     BikeDto update(Long id, BikeDto dto);
     List<BikeDto> listAll();
     BikeDto findById(Long id);
+    List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate);
 }

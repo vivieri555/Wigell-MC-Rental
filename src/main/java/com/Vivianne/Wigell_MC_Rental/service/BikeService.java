@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -75,5 +76,12 @@ public class BikeService implements BikeServiceInterface {
         return bikeRepository.findById(id)
                 .map(Mapper::toBikeDto)
                 .orElseThrow(() -> new ResourceNotFoundException("MC hittades inte med id " + id));
+    }
+    //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
+    @Override
+    @Transactional
+    public List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate) {
+        logger.info("listar alla lediga MC");
+        return bikeRepository.findAvailableBikes(startDate, endDate);
     }
 }

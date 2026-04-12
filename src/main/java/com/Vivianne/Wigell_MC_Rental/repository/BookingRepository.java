@@ -12,8 +12,5 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
     //Kolla om mc är tillgänglig att hyra
     boolean existsByAvailableAndIdAndEndDateAfterAndStartDateBefore(
             Available available, long id, LocalDateTime now1, LocalDateTime now2);
-
-    List<Bike> findByStartDateLessThanEqualAndEndDateGreaterThanEqual(
-            LocalDateTime to, LocalDateTime from);
     List<Booking> findByCustomerId(Long id);
 }

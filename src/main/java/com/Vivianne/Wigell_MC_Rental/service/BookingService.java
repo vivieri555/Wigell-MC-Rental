@@ -102,13 +102,6 @@ public class BookingService implements BookingServiceInterface{
                 .map(Mapper::toBookingDto)
                 .toList();
     }
-    //Lista lediga motorcyklar GET /api/v1/availability?from={YYYY-MM-DD}&to={YYYY-MM-DD}
-    @Override
-    @Transactional
-    public List<Bike> listAvailableBike(LocalDateTime startDate, LocalDateTime endDate) {
-       logger.info("listar alla lediga MC");
-       return bookingRepository.findByStartDateLessThanEqualAndEndDateGreaterThanEqual(startDate, endDate);
-    }
 
     //Hyr motorcykel POST /api/v1/bookings
     //customer, ledig bike, lägga in i Booking

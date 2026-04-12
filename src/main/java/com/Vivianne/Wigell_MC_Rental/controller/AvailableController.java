@@ -2,6 +2,7 @@ package com.Vivianne.Wigell_MC_Rental.controller;
 
 import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
+import com.Vivianne.Wigell_MC_Rental.service.BikeService;
 import com.Vivianne.Wigell_MC_Rental.service.BookingService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +19,8 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class AvailableController {
 
-    private final BookingService bookingService;
-    public AvailableController(BookingService bookingService) { this.bookingService = bookingService; }
+    private final BikeService bikeService;
+    public AvailableController(BikeService bikeService) { this.bikeService = bikeService; }
 
     //Lista lediga motorcyklar
     @GetMapping("/availability")
@@ -27,6 +28,6 @@ public class AvailableController {
     public ResponseEntity<List<Bike>> listAvailableBike(
             @RequestParam("from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDateTime startDate,
             @RequestParam("to") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDateTime endDate) {
-        return ResponseEntity.ok(bookingService.listAvailableBike(startDate, endDate));
+        return ResponseEntity.ok(bikeService.listAvailableBike(startDate, endDate));
     }
 }

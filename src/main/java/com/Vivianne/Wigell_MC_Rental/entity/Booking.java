@@ -1,6 +1,7 @@
 package com.Vivianne.Wigell_MC_Rental.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -34,38 +35,24 @@ public class Booking {
             fetch = FetchType.LAZY
     )
     @JoinColumn(
-            name = "bike_id",
-            foreignKey = @ForeignKey(name = "fk_booking_bike")
-    )
-    private Bike bike;
-
-    @OneToOne(
-            cascade = CascadeType.REFRESH,
-            orphanRemoval = true,
-            fetch = FetchType.LAZY
-    )
-    @JoinColumn(
             name = "customer_id",
             foreignKey = @ForeignKey(name = "fk_booking_customer")
     )
     private Customer customer;
-
-//    @OneToOne(
-//            cascade = CascadeType.REFRESH,
-//            orphanRemoval = true,
-//            fetch = FetchType.LAZY
-//    )
-//    @JoinColumn(
-//            name = "available",
-//            foreignKey = @ForeignKey(name = "fk_booking_available")
-//    )
-//    //private Available available;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "booking_available", joinColumns = @JoinColumn(name = "available_id"))
     @Enumerated(EnumType.STRING)
     @Column(name = "available")
     private Set<Available> available;
+
+    @ManyToOne(optional = false,
+    fetch = FetchType.LAZY)
+    @JoinColumn(name = "bike_id",
+    nullable = false,
+    foreignKey = @ForeignKey(name = "fk_booking_bike"))
+    @Valid
+    private Bike bike;
 
     protected Booking() {}
 

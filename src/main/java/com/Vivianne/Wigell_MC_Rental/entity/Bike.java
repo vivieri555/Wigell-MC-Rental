@@ -1,8 +1,11 @@
 package com.Vivianne.Wigell_MC_Rental.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "bike")
@@ -27,6 +30,12 @@ public class Bike {
 
     @Column()
     private BigDecimal dayPrice;
+
+    @OneToMany(mappedBy = "bike",
+    cascade = CascadeType.ALL,
+    orphanRemoval = true)
+@JsonIgnore
+    private List<Booking> bookings = new ArrayList<>();
 
     protected Bike() {}
 
