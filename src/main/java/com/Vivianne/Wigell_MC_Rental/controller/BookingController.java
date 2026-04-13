@@ -4,16 +4,13 @@ import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.dto.BookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto.UpdateBookingDto;
 import com.Vivianne.Wigell_MC_Rental.dto_create.BookingCreateDto;
-import com.Vivianne.Wigell_MC_Rental.entity.Available;
 import com.Vivianne.Wigell_MC_Rental.service.BookingService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/api/v1/bookings")
@@ -46,6 +43,7 @@ public class BookingController {
     public ResponseEntity<List<BookingDto>> listBookings() {
         return ResponseEntity.ok().body(bookingService.listBookings());
     }
+    //Lista bokningar GET /api/v1/bookings?customerId={customerId}
     @GetMapping(params = "customerId")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<List<BookingDto>> customerBooking(@RequestParam Long customerId) {

@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface BikeRepository extends JpaRepository<Bike, Long> {
-//    List<Bike> findByStartDateLessThanEqualAndEndDateGreaterThanEqual(
-//            LocalDateTime to, LocalDateTime from);
 
     @Query("SELECT b FROM Bike b WHERE b.id NOT IN (" +
             "SELECT bo.bike.id FROM Booking bo " +

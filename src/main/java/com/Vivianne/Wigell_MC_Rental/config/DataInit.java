@@ -27,8 +27,8 @@ public class DataInit {
 
     @Bean
     CommandLineRunner initData(CustomerRepository customerRepo,
-                               AddressRepository addressRepo, KeycloakUserService keycloakUserService,
-                               BikeRepository bikeRepo, BookingService bookingService, BookingRepository bookingRepo) {
+                               KeycloakUserService keycloakUserService,
+                               BikeRepository bikeRepo, BookingService bookingService) {
         return args -> {
             if (customerRepo.count() == 0)
             {
@@ -63,7 +63,8 @@ public class DataInit {
                     customer.getAddresses().add(address1);
                     customer.setKeycloakUserId(admin);
 
-                    String alexandra1 = keycloakUserService.createUserKeycloak("Alexandra", "Andersson", "alexandra@live.com", "password", "USER");
+                    String alexandra1 = keycloakUserService.createUserKeycloak("Alexandra", "Andersson", "alexandra@live.com",
+                            "password", "USER");
                     Customer customer2 = new Customer();
                     customer2.setFirstName("Andersson");
                     customer2.setLastName("Andersson");
@@ -73,15 +74,35 @@ public class DataInit {
                     customer2.setUsername("alexandra@live.com");
 
 
-//                String pelle3 = keycloakUserService.createUserKeycloak("Pelle", "Nordin", "pelle.storhammar@telia.com", "password", "USER");
-//                Customer customer3 = new Customer("Pelle", "Nordin", "0765437568", kungsgatan54List, "pelle.storhammar@telia.com", pelle3);
-//
-//                String roger = keycloakUserService.createUserKeycloak("Roger", "Nordin","nordin@hotmail.com", "password", "USER");
-//                Customer customer4 = new Customer("Roger", "Nordin", "085453486", kungsgatan54List, "nordin@hotmail.com", roger);
-//
-//                String anders = keycloakUserService.createUserKeycloak("Anders", "Hammar", "as@live.com", "password", "USER");
-//                Customer customer5 = new Customer("Anders", "Hammar", "0763355899", gasvagen109List, "as@live.com", anders);
-                    customerRepo.saveAll(List.of(customer, customer2));
+                String pelle3 = keycloakUserService.createUserKeycloak("Pelle", "Nordin",
+                        "pelle.storhammar@telia.com", "password", "USER");
+                Customer customer3 = new Customer();
+                customer3.setFirstName("Pelle");
+                customer3.setLastName("Nordin");
+                customer3.setPhone("0765437568");
+                customer3.getAddresses().add(kungsgatan54);
+                customer3.setUsername("pelle.storhammar@telia.com");
+                customer3.setKeycloakUserId(pelle3);
+
+                String roger = keycloakUserService.createUserKeycloak("Roger", "Nordin","nordin@hotmail.com", "password", "USER");
+                Customer customer4 = new Customer();
+                customer4.setFirstName("Roger");
+                customer4.setLastName("Nordin");
+                customer4.setPhone("085453486");
+                customer4.getAddresses().add(kungsgatan54);
+                customer4.setUsername("nordin@hotmail.com");
+                customer4.setKeycloakUserId(roger);
+
+                String anders = keycloakUserService.createUserKeycloak("Anders", "Hammar",
+                        "as@live.com", "password", "USER");
+                Customer customer5 = new Customer();
+                customer5.setFirstName("Anders");
+                customer5.setLastName("Hammar");
+                customer5.setPhone("0763355899");
+                customer5.getAddresses().add(gasvagen109);
+                customer5.setUsername("as@live.com");
+                customer5.setKeycloakUserId(anders);
+                    customerRepo.saveAll(List.of(customer, customer2, customer3, customer4, customer5));
                     customerRepo.flush();
                 logger.info("Lagt till nya medlemmar");
 
@@ -97,7 +118,7 @@ public class DataInit {
 
                 BookingDto booking1 = bookingService.create(customer2.getId(), bike5.getId(), LocalDateTime.now(),
                         LocalDateTime.of(2026, 4, 30, 12, 30), Set.of(Available.CONFIRMED));
-                BookingDto booking2 = bookingService.create(customer.getId(),bike4.getId(), LocalDateTime.of(2026, 4, 9, 12, 1),
+                BookingDto booking2 = bookingService.create(customer.getId(),bike4.getId(), LocalDateTime.of(2026, 4, 15, 12, 1),
                         LocalDateTime.now(), Set.of(Available.CONFIRMED));
                logger.info("Bokningar sparade " + booking1 + ", " + booking2);
                }

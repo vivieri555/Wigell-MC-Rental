@@ -16,19 +16,19 @@ public class Bike {
     @Column()
     private Long id;
 
-    @Column()
+    @Column(nullable = false, length = 100)
     private String brand;
 
-    @Column()
+    @Column(nullable = false, length = 100)
     private String model;
 
-    @Column()
+    @Column(nullable = false, length = 100)
     private String gearbox;
 
-    @Column()
+    @Column(nullable = false, length = 15)
     private String year;
 
-    @Column()
+    @Column(nullable = false)
     private BigDecimal dayPrice;
 
     @OneToMany(mappedBy = "bike",

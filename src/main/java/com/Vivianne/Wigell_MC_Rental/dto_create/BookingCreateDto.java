@@ -1,8 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.dto_create;
 
 import com.Vivianne.Wigell_MC_Rental.entity.Available;
-import com.Vivianne.Wigell_MC_Rental.entity.Bike;
-import com.Vivianne.Wigell_MC_Rental.entity.Customer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;

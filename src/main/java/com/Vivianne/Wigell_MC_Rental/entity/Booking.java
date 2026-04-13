@@ -3,7 +3,6 @@ package com.Vivianne.Wigell_MC_Rental.entity;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 
-import javax.print.attribute.HashPrintServiceAttributeSet;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -18,13 +17,12 @@ public class Booking {
     @Column()
     private Long id;
 
-    @Column()
+    @Column(nullable = false)
     private LocalDateTime startDate;
 
-    @Column()
+    @Column(nullable = false)
     private LocalDateTime endDate;
 
-    //presenteras i SEK och GBP, lokal placeholder?
     @Column()
     private BigDecimal priceSEK;
 

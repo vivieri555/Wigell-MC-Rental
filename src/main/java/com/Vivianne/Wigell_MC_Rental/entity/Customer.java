@@ -28,7 +28,7 @@ public class Customer {
     @Column(nullable = false, length = 50)
     private String lastName;
 
-    @Column()
+    @Column(nullable = false, length = 15)
     private String phone;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})

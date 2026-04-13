@@ -1,9 +1,7 @@
 package com.Vivianne.Wigell_MC_Rental.controller;
 
-import com.Vivianne.Wigell_MC_Rental.dto.AvailablePatchDto;
 import com.Vivianne.Wigell_MC_Rental.entity.Bike;
 import com.Vivianne.Wigell_MC_Rental.service.BikeService;
-import com.Vivianne.Wigell_MC_Rental.service.BookingService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -26,8 +24,8 @@ public class AvailableController {
     @GetMapping("/availability")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<List<Bike>> listAvailableBike(
-            @RequestParam("from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDateTime startDate,
-            @RequestParam("to") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDateTime endDate) {
+            @RequestParam("from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate,
+            @RequestParam("to") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endDate) {
         return ResponseEntity.ok(bikeService.listAvailableBike(startDate, endDate));
     }
 }

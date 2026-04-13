@@ -1,10 +1,7 @@
 package com.Vivianne.Wigell_MC_Rental.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "address")
@@ -23,14 +20,6 @@ public class Address {
 
     @Column(nullable = false, length = 50)
     private String postalCode;
-
-//    @OneToMany(
-//            mappedBy = "address",
-//            cascade = CascadeType.ALL,
-//            orphanRemoval = true
-//    )
-//    //@JsonIgnore
-//    private List<Customer> customersList = new ArrayList<>();
 
     protected Address() {}
 
