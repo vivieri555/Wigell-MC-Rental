@@ -14,6 +14,7 @@ import com.Vivianne.Wigell_MC_Rental.repository.BookingRepository;
 import com.Vivianne.Wigell_MC_Rental.repository.CustomerRepository;
 import com.groupc.shared.client.CurrencyClient;
 import com.groupc.shared.exception.ResourceNotFoundException;
+import jakarta.ws.rs.BadRequestException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -146,15 +147,31 @@ public class BookingService implements BookingServiceInterface{
     public BookingDto changeBooking(Long id, UpdateBookingDto dto) {
        var booking = bookingRepository.findById(id)
                .orElseThrow(() -> new ResourceNotFoundException("Hittade inte bokning med id " + id));
-       if(dto.startDate() != null) {
+
+       LocalDateTime start = (dto.startDate() != null) ? dto.startDate() : booking.getStartDate();
+       LocalDateTime end = (dto.endDate() != null) ? dto.endDate() : booking.getEndDate();
+       if (start == null || end == null) {
+           throw new BadRequestException("Bokning saknar start- elr slutdatum");
+       }
+
+       if(dto.startDate() != null || dto.endDate() != null || dto.bikeId() != null) {
            booking.setStartDate(dto.startDate());
-       }
-       if (dto.endDate() != null) {
            booking.setEndDate(dto.endDate());
+
+        Bike bike = bikeRepository.findById(dto.bikeId())
+                .orElseThrow(() -> new ResourceNotFoundException("MC hittades inte"));
+        booking.setBike(bike);
+
+        long days = dateDiff(start, end);
+        if (days <= 0) days = 1;
+        BigDecimal newPriceSek = bike.getDayPrice().multiply(BigDecimal.valueOf(days));
+        double exchangeRate = currencyClient.getExchangeRate("SEK", "GBP");
+        BigDecimal newPriceGBP = newPriceSek.multiply(BigDecimal.valueOf(exchangeRate)).setScale(2, RoundingMode.HALF_UP);
+
+        booking.setPriceSEK(newPriceSek);
+        booking.setTotalPriceGBP(newPriceGBP);
        }
-       if (dto.bike() != null) {
-           booking.setBike(dto.bike());
-       }
+
        var saved = bookingRepository.save(booking);
        logger.info("Bokning uppdaterad på bokningsid '{}'", saved.getId());
        return Mapper.toBookingDto(saved);

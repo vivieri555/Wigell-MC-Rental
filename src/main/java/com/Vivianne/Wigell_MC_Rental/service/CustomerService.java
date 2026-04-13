@@ -102,7 +102,7 @@ public class CustomerService implements CustomerServiceInterface {
         customer.setFirstName(dto.firstName());
         customer.setLastName(dto.lastName());
         customer.setPhone(dto.phone());
-        customer.setAddress(dto.addresses());
+        customer.setAddresses(dto.addresses());
         customer.setUsername(dto.username());
 
         customerRepository.save(customer);

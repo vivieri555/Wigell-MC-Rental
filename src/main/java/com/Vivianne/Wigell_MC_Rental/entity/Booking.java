@@ -31,15 +31,15 @@ public class Booking {
     @Column()
     private BigDecimal totalPriceGBP;
 
-    @OneToOne(
-            cascade = CascadeType.REFRESH,
-            orphanRemoval = true,
+    @ManyToOne(
+            optional = false,
             fetch = FetchType.LAZY
     )
     @JoinColumn(
             name = "customer_id",
             foreignKey = @ForeignKey(name = "fk_booking_customer")
     )
+    @Valid
     private Customer customer;
 
     @ElementCollection(fetch = FetchType.EAGER)

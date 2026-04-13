@@ -15,7 +15,7 @@ import java.util.List;
 public final class Mapper {
     public static CustomerDto toDto(Customer customer) {
         return new CustomerDto(customer.getId(), customer.getFirstName(), customer.getLastName(),
-                customer.getPhone(), customer.getAddress(), customer.getUsername());
+                customer.getPhone(), customer.getAddresses(), customer.getUsername());
     }
     public static Customer fromCreate(CustomerCreateDto createDto, String keycloakId) {
         return new Customer(createDto.firstName(), createDto.lastName(),

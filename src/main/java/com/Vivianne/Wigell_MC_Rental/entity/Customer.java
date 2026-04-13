@@ -1,5 +1,6 @@
 package com.Vivianne.Wigell_MC_Rental.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 
@@ -39,13 +40,19 @@ public class Customer {
     @Valid
     private List<Address> addresses = new ArrayList<>();
 
+    @OneToMany(mappedBy = "customer",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    @JsonIgnore
+    private List<Booking> bookings = new ArrayList<>();
+
     @Column(unique = true)
     private String username;
 
     @Column(unique = true, length = 36)
     private String keycloakUserId;
 
-    protected Customer() {}
+    public Customer() {}
 
     public Customer(String firstName, String lastName, String phone, List<Address> addresses,
                     String username, String keycloakUserId) {
@@ -89,10 +96,10 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public List<Address> getAddress() {
+    public List<Address> getAddresses() {
         return addresses;
     }
-    public void setAddress(List<Address> addresses) {
+    public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
     }
     public String getUsername() {

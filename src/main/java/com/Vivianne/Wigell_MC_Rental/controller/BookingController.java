@@ -33,22 +33,23 @@ public class BookingController {
     URI location = URI.create("/api/v1/bookings/" + book.id());
     return ResponseEntity.created(location).body(book);
     }
+    //Uppdatera bokning PATCH /api/v1/bookings/{bookingId} (tillåtna fält: motorcykel, datum)
     @PatchMapping("/{bookingId}")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<BookingDto> changeBooking(@PathVariable Long bookingId, @RequestBody UpdateBookingDto dto) {
         BookingDto updated = bookingService.changeBooking(bookingId, dto);
         return ResponseEntity.ok(updated);
     }
-    @GetMapping("?customerId={customerId}")
-    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
-    public ResponseEntity<List<BookingDto>> customerBooking(@PathVariable Long customerId) {
-        return ResponseEntity.ok().body(bookingService.customerBooking(customerId));
-    }
     //Lista bokningar GET /api/v1/bookings
     @GetMapping
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<BookingDto>> listBookings() {
         return ResponseEntity.ok().body(bookingService.listBookings());
+    }
+    @GetMapping(params = "customerId")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    public ResponseEntity<List<BookingDto>> customerBooking(@RequestParam Long customerId) {
+        return ResponseEntity.ok().body(bookingService.customerBooking(customerId));
     }
     @GetMapping("/{bookingId}")
     @PreAuthorize("hasRole('ADMIN')")

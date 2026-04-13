@@ -32,7 +32,7 @@ public class AddressService implements AddressServiceInterface {
         Address address = Mapper.createAddress(addressDto);
         Address saved = addressRepository.save(address);
 
-        customer.getAddress().add(saved);
+        customer.getAddresses().add(saved);
         customerRepository.save(customer);
 
         logger.info("Adress skapad och tilldelad kund '{}'", customer);
@@ -47,11 +47,11 @@ public class AddressService implements AddressServiceInterface {
             throw new ResourceNotFoundException("Adress med id " + addressId + " existerar inte");
         }
         var customer = customerService.findCustomer(customerId);
-        var address = customer.getAddress().stream()
+        var address = customer.getAddresses().stream()
                         .filter(a -> a.getId().equals(addressId))
                                 .findFirst()
                                         .orElseThrow(() -> new ResourceNotFoundException("Inte rätt adress"));
-        customer.getAddress().remove(address);
+        customer.getAddresses().remove(address);
         logger.info("Raderar adressen med id " + addressId);
         customerRepository.save(customer);
         addressRepository.delete(address);
